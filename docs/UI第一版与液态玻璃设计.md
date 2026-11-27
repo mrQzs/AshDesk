@@ -2,7 +2,7 @@
 
 > 状态：设计稿 v0.1　｜　依据：[`UI设计.md`](UI设计.md)（下称“规范”）　｜　原型：[`design/prototype/`](../design/prototype/index.html)
 
-本次交付是**可交互 HTML 设计原型 + Qt Widgets 落地方案**，不是已接入远程控制核心的 Qt 程序。交付目录为 `D:\Code\AetherDesk`；参考规范来自 `D:\Code\AshDesk\docs\UI设计.md`，已连同数学证明原样复制到本目录，便于离线查阅。用户选择的三平台 Qt Widgets 路线优先于原规范中的 Qt Quick / macOS 原生路线。
+本次交付是**可交互 HTML 设计原型 + Qt Widgets 落地方案**，不是已接入远程控制核心的 Qt 程序。交付目录为当时的 AetherDesk 仓库；参考规范来自《UI 设计》（`docs/UI设计.md`，未随本仓库公开），已连同数学证明原样复制到本目录，便于离线查阅。用户选择的三平台 Qt Widgets 路线优先于原规范中的 Qt Quick / macOS 原生路线。
 
 ## 1. 目标与成功标准
 

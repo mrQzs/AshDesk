@@ -27,9 +27,9 @@ vcpkg.json（放在任意一个空目录里，比如 build/vcpkg-ossl）:
   "dependencies": [ "openssl" ] }
 
 "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\vcpkg\vcpkg.exe" install --triplet x64-windows ^
-  --overlay-ports=D:/Code/AshDesk/third_party/openssl/port ^
-  --x-buildtrees-root=D:/Code/AshDesk/build/vcpkg/obt --x-packages-root=D:/Code/AshDesk/build/vcpkg/opk ^
-  --x-install-root=D:/Code/AshDesk/build/vcpkg/oinst
+  --overlay-ports=<仓库目录>/third_party/openssl/port ^
+  --x-buildtrees-root=<仓库目录>/build/vcpkg/obt --x-packages-root=<仓库目录>/build/vcpkg/opk ^
+  --x-install-root=<仓库目录>/build/vcpkg/oinst
 ```
 
 产物（`build/vcpkg/oinst/x64-windows/`）拷到这里：
