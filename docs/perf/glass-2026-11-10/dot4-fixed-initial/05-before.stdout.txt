@@ -1,0 +1,21 @@
+Note: Google Test filter = DesktopGlass.IdleRepaintReusesCachesWhileResizeAndScrollRecompose:GlassBenchmark.FixedPanelMovement
+[==========] Running 2 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopGlass
+[ RUN      ] DesktopGlass.IdleRepaintReusesCachesWhileResizeAndScrollRecompose
+[ perf ] 1120x740@1.75 backdrop 32.64 ms, 19829 KiB; full glass frame 6.56/7.86 ms (p50/p95)
+[ perf ] drag-resize step 13.64/21.43 ms, scroll step 11.01/11.01 ms, panel composition p95 7.04 ms
+[ perf ] 640x480 full frame p95: glass 4.19 ms, solid 7.14 ms
+[       OK ] DesktopGlass.IdleRepaintReusesCachesWhileResizeAndScrollRecompose (1036 ms)
+[----------] 1 test from DesktopGlass (1036 ms total)
+
+[----------] 1 test from GlassBenchmark
+[ RUN      ] GlassBenchmark.FixedPanelMovement
+[ fixed ] panel 780x480@1.75 composition 5.84007/8.2046 ms (p50/p95)
+[ fixed samples ns ] 8204600 6277690 9349950 6126660 6029670 6280340 7172330 7477530 8471710 6892500 5477440 5335920 6360560 6436370 7227570 5658040 6957780 7302450 6094920 5840250 5670910 7460860 5135370 5463940 5840070 5309870 5416050 4880980 5311570 5906350 5470950 5682830 5540040 5680460 5897320 5339880 6346470 5900900 6111130 4886300 6442640 5401570 6188730 5374010 5773160 5341230 6650690 4988400 5256220 4852110 5065520 5664850 4909570 5975480 5287120 5763870 6206060 5504420 5509460 6508210
+[       OK ] GlassBenchmark.FixedPanelMovement (810 ms)
+[----------] 1 test from GlassBenchmark (811 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 2 test suites ran. (1847 ms total)
+[  PASSED  ] 2 tests.

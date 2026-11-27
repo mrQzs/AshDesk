@@ -1,0 +1,18 @@
+AshDesk
+Copyright 2026 mrQzs
+
+This repository (the AshDesk desktop app: user interface, glass rendering kernels, updater,
+install scripts) is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The remote desktop engine (adrd_host, adrd_client, adrd_svc, adrd_vd, adrd_va) that ships
+in the release packages is proprietary. It is distributed in binary form only and is NOT
+covered by the Apache License; its terms are in licenses/engine in the release package.
+The virtual display and virtual audio drivers in the release packages are derived from
+Microsoft driver samples and are distributed in binary form under the Microsoft Public
+License (licenses/vdisplay, licenses/vaudio).
+
+Third-party components:
+- Qt 6 (LGPL-3.0), linked dynamically. https://www.qt.io/licensing
+- OpenSSL 3.5 (Apache-2.0), used by the updater. third_party/openssl/LICENSE.txt
+- GoogleTest (BSD-3-Clause), tests only. third_party/googletest/LICENSE
+- OpenH264 (BSD-2-Clause, Cisco binary license), downloaded at install time, not redistributed.

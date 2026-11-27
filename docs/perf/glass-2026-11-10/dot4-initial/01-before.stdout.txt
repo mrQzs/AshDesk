@@ -1,0 +1,14 @@
+Note: Google Test filter = DesktopGlass.IdleRepaintReusesCachesWhileResizeAndScrollRecompose
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopGlass
+[ RUN      ] DesktopGlass.IdleRepaintReusesCachesWhileResizeAndScrollRecompose
+[ perf ] 1120x740@1.75 backdrop 27.71 ms, 19829 KiB; full glass frame 5.06/6.04 ms (p50/p95)
+[ perf ] drag-resize step 10.24/11.96 ms, scroll step 9.95/9.95 ms, panel composition p95 6.37 ms
+[ perf ] 640x480 full frame p95: glass 3.91 ms, solid 7.76 ms
+[       OK ] DesktopGlass.IdleRepaintReusesCachesWhileResizeAndScrollRecompose (882 ms)
+[----------] 1 test from DesktopGlass (882 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (883 ms total)
+[  PASSED  ] 1 test.

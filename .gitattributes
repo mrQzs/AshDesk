@@ -1,0 +1,8 @@
+* text=auto
+*.sh text eol=lf
+*.py text eol=lf
+*.bat text eol=crlf
+*.png binary
+# vcpkg 端口的补丁按 LF 打到上游源码上，检出成 CRLF 会打不上
+*.patch text eol=lf
+*.diff.in text eol=lf

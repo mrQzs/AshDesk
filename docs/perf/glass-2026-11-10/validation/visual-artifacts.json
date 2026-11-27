@@ -1,0 +1,9 @@
+{
+  "crop": [
+    0,
+    329,
+    1923,
+    1061
+  ],
+  "note": "Published crops omit the machine name and network address bar. Full-size source PNGs remain under ignored build/. visual-comparison.json measures the original full-size images."
+}

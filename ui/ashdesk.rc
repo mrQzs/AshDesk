@@ -1,0 +1,35 @@
+// Qt registers its window class icon from the resource named IDI_ICON1; the
+// same name is loaded by adrd_client's viewer window.
+// ASHDESK_RC_NAME / ASHDESK_RC_FILE / ASHDESK_RC_DESCRIPTION come per exe from
+// ashdesk_add_rc() in CMakeLists.txt. ASCII only: rc.exe reads the ANSI code page.
+#include <winver.h>
+#include "ashdesk_version.h"
+
+IDI_ICON1 ICON "icons/app/ashdesk.ico"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION ASHDESK_VERSION_MAJOR, ASHDESK_VERSION_MINOR, ASHDESK_VERSION_PATCH, 0
+PRODUCTVERSION ASHDESK_VERSION_MAJOR, ASHDESK_VERSION_MINOR, ASHDESK_VERSION_PATCH, 0
+FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+FILEFLAGS 0
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_APP
+FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", ASHDESK_RC_DESCRIPTION
+            VALUE "FileVersion", ASHDESK_VERSION_STRING
+            VALUE "InternalName", ASHDESK_RC_NAME
+            VALUE "OriginalFilename", ASHDESK_RC_FILE
+            VALUE "ProductName", "AshDesk"
+            VALUE "ProductVersion", ASHDESK_VERSION_STRING
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

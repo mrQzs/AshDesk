@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="14"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="5"
+	timestamp="2026-11-10T13:30:32"
+	>
+	<testcase name="DesktopEndpoint.ParsesDirectAddressesAndRejectsUrlsOrInvalidPorts" classname="DesktopEndpoint.ParsesDirectAddressesAndRejectsUrlsOrInvalidPorts" time="0.171042" status="run">
+		<properties/>
+		<system-out>Note: Google Test filter = DesktopEndpoint.ParsesDirectAddressesAndRejectsUrlsOrInvalidPorts
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopEndpoint
+[ RUN      ] DesktopEndpoint.ParsesDirectAddressesAndRejectsUrlsOrInvalidPorts
+[       OK ] DesktopEndpoint.ParsesDirectAddressesAndRejectsUrlsOrInvalidPorts (0 ms)
+[----------] 1 test from DesktopEndpoint (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="DesktopArguments.SettingsReachTheCoreWithoutPlaintextSecretsOrShellExpansion" classname="DesktopArguments.SettingsReachTheCoreWithoutPlaintextSecretsOrShellExpansion" time="0.0351145" status="run">
+		<properties/>
+		<system-out>Note: Google Test filter = DesktopArguments.SettingsReachTheCoreWithoutPlaintextSecretsOrShellExpansion
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopArguments
+[ RUN      ] DesktopArguments.SettingsReachTheCoreWithoutPlaintextSecretsOrShellExpansion
+[       OK ] DesktopArguments.SettingsReachTheCoreWithoutPlaintextSecretsOrShellExpansion (1 ms)
+[----------] 1 test from DesktopArguments (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="DesktopWidgets.AllPagesRemainReachableWithoutACore" classname="DesktopWidgets.AllPagesRemainReachableWithoutACore" time="0.502463" status="run">
+		<properties/>
+		<system-out>Note: Google Test filter = DesktopWidgets.AllPagesRemainReachableWithoutACore
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopWidgets
+[ RUN      ] DesktopWidgets.AllPagesRemainReachableWithoutACore
+[       OK ] DesktopWidgets.AllPagesRemainReachableWithoutACore (458 ms)
+[----------] 1 test from DesktopWidgets (458 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (458 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="DesktopWidgets.PreferencesSurviveReopeningAndThemeAppliesImmediately" classname="DesktopWidgets.PreferencesSurviveReopeningAndThemeAppliesImmediately" time="0.118759" status="run">
+		<properties/>
+		<system-out>Note: Google Test filter = DesktopWidgets.PreferencesSurviveReopeningAndThemeAppliesImmediately
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopWidgets
+[ RUN      ] DesktopWidgets.PreferencesSurviveReopeningAndThemeAppliesImmediately
+[       OK ] DesktopWidgets.PreferencesSurviveReopeningAndThemeAppliesImmediately (81 ms)
+[----------] 1 test from DesktopWidgets (81 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (81 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="DesktopWidgets.DeviceValidationUpdateAndRemovalPersistWithoutTruncatingOtherRows" classname="DesktopWidgets.DeviceValidationUpdateAndRemovalPersistWithoutTruncatingOtherRows" time="0.398614" status="run">
+		<properties/>
+		<system-out>Note: Google Test filter = DesktopWidgets.DeviceValidationUpdateAndRemovalPersistWithoutTruncatingOtherRows
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopWidgets
+[ RUN      ] DesktopWidgets.DeviceValidationUpdateAndRemovalPersistWithoutTruncatingOtherRows
+[       OK ] DesktopWidgets.DeviceValidationUpdateAndRemovalPersistWithoutTruncatingOtherRows (356 ms)
+[----------] 1 test from DesktopWidgets (356 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (356 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="DesktopWidgets.FocusRingAppearsOnlyAfterKeyboardNavigation" classname="DesktopWidgets.FocusRingAppearsOnlyAfterKeyboardNavigation" time="0.226639" status="run">
+		<properties/>
+		<system-out>Note: Google Test filter = DesktopWidgets.FocusRingAppearsOnlyAfterKeyboardNavigation
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopWidgets
+[ RUN      ] DesktopWidgets.FocusRingAppearsOnlyAfterKeyboardNavigation
+[       OK ] DesktopWidgets.FocusRingAppearsOnlyAfterKeyboardNavigation (179 ms)
+[----------] 1 test from DesktopWidgets (179 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (179 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="DesktopGlass.IdleRepaintReusesCachesWhileResizeAndScrollRecompose" classname="DesktopGlass.IdleRepaintReusesCachesWhileResizeAndScrollRecompose" time="0.939544" status="run">
+		<properties/>
+		<system-out>Note: Google Test filter = DesktopGlass.IdleRepaintReusesCachesWhileResizeAndScrollRecompose
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopGlass
+[ RUN      ] DesktopGlass.IdleRepaintReusesCachesWhileResizeAndScrollRecompose
+[ perf ] 1099x606@1.75 backdrop 11.46 ms, 8471 KiB; panel caches 17088 KiB; full glass frame 3.90/5.23 ms (p50/p95)
+[ perf ] drag-resize step 19.48/22.57 ms, scroll step 7.55/7.79 ms, panel composition p95 2.92 ms
+[ perf ] 640x480 full frame p95: glass 3.03 ms, solid 6.73 ms
+[       OK ] DesktopGlass.IdleRepaintReusesCachesWhileResizeAndScrollRecompose (890 ms)
+[----------] 1 test from DesktopGlass (890 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (890 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="DesktopGlass.SolidMaterialReleasesTheBackdropAndPersists" classname="DesktopGlass.SolidMaterialReleasesTheBackdropAndPersists" time="0.279514" status="run">
+		<properties/>
+		<system-out>Note: Google Test filter = DesktopGlass.SolidMaterialReleasesTheBackdropAndPersists
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopGlass
+[ RUN      ] DesktopGlass.SolidMaterialReleasesTheBackdropAndPersists
+[       OK ] DesktopGlass.SolidMaterialReleasesTheBackdropAndPersists (230 ms)
+[----------] 1 test from DesktopGlass (230 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (230 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="DesktopProcess.PipeStopExitsNormallyAndCapturesDiagnostics" classname="DesktopProcess.PipeStopExitsNormallyAndCapturesDiagnostics" time="0.117047" status="run">
+		<properties/>
+		<system-out>Note: Google Test filter = DesktopProcess.PipeStopExitsNormallyAndCapturesDiagnostics
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopProcess
+[ RUN      ] DesktopProcess.PipeStopExitsNormallyAndCapturesDiagnostics
+[       OK ] DesktopProcess.PipeStopExitsNormallyAndCapturesDiagnostics (77 ms)
+[----------] 1 test from DesktopProcess (77 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (77 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="DesktopProcess.StartupFailureDoesNotLeaveABusySession" classname="DesktopProcess.StartupFailureDoesNotLeaveABusySession" time="0.0820913" status="run">
+		<properties/>
+		<system-out>Note: Google Test filter = DesktopProcess.StartupFailureDoesNotLeaveABusySession
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopProcess
+[ RUN      ] DesktopProcess.StartupFailureDoesNotLeaveABusySession
+[       OK ] DesktopProcess.StartupFailureDoesNotLeaveABusySession (47 ms)
+[----------] 1 test from DesktopProcess (47 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (47 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="DesktopCore.ClientClosesItsViewerThroughTheControlPipe" classname="DesktopCore.ClientClosesItsViewerThroughTheControlPipe" time="0.640548" status="run">
+		<properties/>
+		<system-out>Note: Google Test filter = DesktopCore.ClientClosesItsViewerThroughTheControlPipe
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopCore
+[ RUN      ] DesktopCore.ClientClosesItsViewerThroughTheControlPipe
+[       OK ] DesktopCore.ClientClosesItsViewerThroughTheControlPipe (604 ms)
+[----------] 1 test from DesktopCore (604 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (604 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="DesktopCore.HostPerformsNormalCleanupForSplitStopAndClosedParentPipe" classname="DesktopCore.HostPerformsNormalCleanupForSplitStopAndClosedParentPipe" time="0.946734" status="run">
+		<properties/>
+		<system-out>Note: Google Test filter = DesktopCore.HostPerformsNormalCleanupForSplitStopAndClosedParentPipe
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopCore
+[ RUN      ] DesktopCore.HostPerformsNormalCleanupForSplitStopAndClosedParentPipe
+[       OK ] DesktopCore.HostPerformsNormalCleanupForSplitStopAndClosedParentPipe (795 ms)
+[----------] 1 test from DesktopCore (795 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (795 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="GlassBenchmark.FixedPanelMovement" classname="GlassBenchmark.FixedPanelMovement" time="0.673473" status="run">
+		<properties/>
+		<system-out>Note: Google Test filter = GlassBenchmark.FixedPanelMovement
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GlassBenchmark
+[ RUN      ] GlassBenchmark.FixedPanelMovement
+[ fixed ] panel 780x480@1.75 composition 3.1042/3.5798 ms (p50/p95)
+[ fixed samples ns ] 3200000 3013700 3142600 3427600 3068400 3286500 3290900 3123600 3042500 3386100 3279500 3079900 3197900 3082000 2958900 3687600 3069500 2961200 3257900 3024300 3104400 3404600 3091200 3038800 3185200 2981900 3278300 3178300 3104200 3145300 3354700 3178000 3321900 3093500 2972900 3003200 3311000 3266800 3660500 3037300 2982800 3061800 3173800 2968500 3555000 3053700 2959300 3054100 3240400 3054300 3579800 3023400 3026200 3099000 3308600 3033900 3434300 2980800 2983200 3029300
+[       OK ] GlassBenchmark.FixedPanelMovement (631 ms)
+[----------] 1 test from GlassBenchmark (631 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (631 ms total...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="test_glass" classname="test_glass" time="0.069191" status="run">
+		<properties/>
+		<system-out>glass rows: sse2
+  scalar ns/px: blur_h 2.37 blur_v 0.86 down4(per src col) 2.07 lerp 2.18 expand4 1.13
+  sse2   ns/px: blur_h 0.57 blur_v 0.24 down4(per src col) 0.37 lerp 0.18 expand4 0.27
+checks=778 failures=0
+</system-out>
+	</testcase>
+</testsuite>

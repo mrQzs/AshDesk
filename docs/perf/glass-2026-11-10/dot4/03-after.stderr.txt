@@ -1,0 +1,2 @@
+QFontDatabase: Cannot find font directory C:/tmp/glass-final/after/lib/fonts.
+Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.

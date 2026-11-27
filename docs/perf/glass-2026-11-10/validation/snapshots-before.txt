@@ -1,0 +1,11 @@
+Note: Google Test filter = DesktopWidgets.AllPagesRemainReachableWithoutACore
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DesktopWidgets
+[ RUN      ] DesktopWidgets.AllPagesRemainReachableWithoutACore
+[       OK ] DesktopWidgets.AllPagesRemainReachableWithoutACore (3522 ms)
+[----------] 1 test from DesktopWidgets (3522 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (3522 ms total)
+[  PASSED  ] 1 test.

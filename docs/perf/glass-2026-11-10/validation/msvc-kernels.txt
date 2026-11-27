@@ -1,0 +1,4 @@
+glass rows: sse2
+  scalar ns/px: blur_h 2.35 blur_v 0.86 down4(per src col) 2.07 lerp 2.07 expand4 1.06
+  sse2   ns/px: blur_h 0.65 blur_v 0.23 down4(per src col) 0.38 lerp 0.18 expand4 0.27
+checks=778 failures=0

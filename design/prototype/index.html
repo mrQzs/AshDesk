@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="zh-CN" data-screen="home" data-mat="glass" data-q="2" data-os="win" data-theme="light" data-rt="0" data-rm="0" data-hc="0">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AshDesk 极帧 · UI 原型</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g-silver" x1="0" y1="1" x2=".55" y2="0">
+      <stop offset="0" style="stop-color:var(--logo-s0)"/>
+      <stop offset=".6" style="stop-color:var(--logo-s1)"/>
+      <stop offset="1" style="stop-color:var(--logo-s2)"/>
+    </linearGradient>
+    <g id="lg-defs"></g>
+  </defs>
+  <symbol id="logo" viewBox="0 0 32 32">
+    <path d="M2.5 29 13 3h6.2L8.8 29Z" fill="url(#g-silver)"/>
+    <path d="M19.2 3 29.5 29h-6.3L16.1 10.7Z" style="fill:var(--logo-slate)"/>
+    <path d="M7.6 19.4H25.4l-1.7 4.2H5.9Z" fill="#0A9BFF"/>
+  </symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><rect x="2.5" y="4" width="13" height="10" rx="1.5"/><path d="M6 18.5h6M9 14v4.5"/><rect x="17.5" y="8" width="4" height="11" rx="1"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 6h9M18 6h2M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15.5" cy="6" r="2.2"/><circle cx="9" cy="12" r="2.2"/><circle cx="17" cy="18" r="2.2"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M10.6 5.6c.5-.1.9-.1 1.4-.1 6 0 9.5 6.5 9.5 6.5a17 17 0 0 1-2.6 3.4M6.6 6.6C3.9 8.4 2.5 12 2.5 12S6 18.5 12 18.5c1.9 0 3.5-.6 4.9-1.5M3 3l18 18M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.34-5.66L20 8.5"/><path d="M20 3.5v5h-5"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M16 7l3 3M14 9l2 2"/></symbol>
+  <symbol id="i-chev-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-chev-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 17a8 8 0 1 1 16 0"/><path d="m12 17 4-5"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+  <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2"/><path d="M6 10h.01M9 10h.01M12 10h.01M15 10h.01M18 10h.01M7 14h10"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></symbol>
+  <symbol id="i-volume" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4Z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></symbol>
+  <symbol id="i-mic-off" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M4 4l16 16"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 15-14-1 10-6 15-14 15"/><path d="m5 19 7-7"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+  <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3v8"/><path d="M6.3 6.8a8 8 0 1 0 11.4 0"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 7V4.5h4V7M6.5 7l1 13h9l1-13"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 4 2.8 20h18.4Z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 3 5 13.5h6L10 21l9-11h-6Z"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.6 16a5 5 0 0 1 6.8 0M12 19.5h.01"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/><path d="M8 7h.01M8 17h.01"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="10" rx="1.5"/><path d="M2 19h20"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6Z"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.8-.8 1.8-1.8 0-1.3-1.3-1.7-1.3-2.9 0-1 .8-1.6 1.8-1.6h2.2A4.5 4.5 0 0 0 21 10.3C21 6.2 17 3 12 3Z"/><path d="M7.5 11h.01M10 7.5h.01M14.5 7.5h.01"/></symbol>
+  <symbol id="i-cap-min" viewBox="0 0 10 10"><path d="M0 5h10"/></symbol>
+  <symbol id="i-cap-max" viewBox="0 0 10 10"><rect x=".5" y=".5" width="9" height="9" rx="1"/></symbol>
+  <symbol id="i-cap-close" viewBox="0 0 10 10"><path d="M0 0l10 10M10 0 0 10"/></symbol>
+</svg>
+
+<header class="harness" aria-label="原型控制台">
+  <div class="h-group" role="group" aria-label="界面">
+    <button data-go="screen:home">首页</button>
+    <button data-go="screen:connecting">连接中</button>
+    <button data-go="screen:session">会话</button>
+    <button data-go="screen:host-request">被控请求</button>
+    <button data-go="screen:host-active">被控中</button>
+    <button data-go="screen:devices">设备</button>
+    <button data-go="screen:pairing">配对</button>
+    <button data-go="screen:settings">设置</button>
+  </div>
+  <div class="h-group" role="group" aria-label="材质">
+    <button data-go="mat:solid">第一版</button>
+    <button data-go="mat:glass">液态玻璃</button>
+  </div>
+  <div class="h-group" role="group" aria-label="玻璃质量">
+    <button data-go="q:auto">自动</button>
+    <button data-go="q:1">Q1</button>
+    <button data-go="q:2">Q2</button>
+    <button data-go="q:3">Q3</button>
+  </div>
+  <div class="h-group" role="group" aria-label="平台">
+    <button data-go="os:win">Windows</button>
+    <button data-go="os:mac">macOS</button>
+    <button data-go="os:linux">Linux</button>
+  </div>
+  <div class="h-group" role="group" aria-label="主题">
+    <button data-go="theme:auto">自动</button>
+    <button data-go="theme:light">浅</button>
+    <button data-go="theme:dark">深</button>
+  </div>
+  <div class="h-group" role="group" aria-label="辅助功能">
+    <button data-flip="rt">降低透明度</button>
+    <button data-flip="rm">减少动态</button>
+    <button data-flip="hc">增强对比</button>
+  </div>
+  <output class="h-stat" id="h-stat" aria-label="位移图统计"></output>
+</header>
+
+<main class="stage">
+
+  <!-- ========== 主窗口 ========== -->
+  <section class="win win-main" aria-label="AshDesk">
+    <div class="backdrop" aria-hidden="true"><i class="bk b1"></i><i class="bk b2"></i><i class="bk b3"></i><i class="bk b4"></i><i class="bk b5"></i></div>
+
+    <div class="caps">
+      <button class="cap cap-min" aria-label="最小化"><svg class="ic"><use href="#i-cap-min"/></svg></button>
+      <button class="cap cap-max" aria-label="最大化"><svg class="ic"><use href="#i-cap-max"/></svg></button>
+      <button class="cap cap-close" aria-label="关闭"><svg class="ic"><use href="#i-cap-close"/></svg></button>
+    </div>
+
+    <nav class="rail glass" data-role="nav" aria-label="主导航">
+      <div class="logo" role="img" aria-label="AshDesk 极帧"><svg><use href="#logo"/></svg></div>
+      <span class="rail-ind" aria-hidden="true"></span>
+      <button class="rail-btn" data-go="screen:home" aria-label="连接"><svg class="ic"><use href="#i-link"/></svg></button>
+      <button class="rail-btn" data-go="screen:devices" aria-label="设备"><svg class="ic"><use href="#i-devices"/></svg></button>
+      <button class="rail-btn" data-go="screen:settings" aria-label="设置"><svg class="ic"><use href="#i-settings"/></svg></button>
+      <span class="grow"></span>
+      <span class="presence" role="img" aria-label="信令服务器已连接"></span>
+    </nav>
+
+    <div class="pages">
+
+      <!-- 首页 -->
+      <section class="page page-home" aria-label="连接">
+        <div class="hero">
+          <form class="omnibox glass" data-role="action" id="omni" role="search" aria-label="连接到远程设备">
+            <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+            <input id="omni-input" aria-label="对方 ID 或地址" placeholder="对方 ID 或地址" autocomplete="off" spellcheck="false">
+            <button type="button" class="mode-btn" data-pop="mode" aria-haspopup="menu" aria-label="连接方式"><span id="mode-label">自动</span><svg class="ic sm" aria-hidden="true"><use href="#i-chev-down"/></svg></button>
+            <button type="submit" class="btn primary pill">连接</button>
+          </form>
+
+          <div class="me content">
+            <span class="tag">本机</span>
+            <span class="me-id" aria-label="本机 ID 482 913 557">482 913 557</span>
+            <button class="icon-btn" data-act="copy-id" aria-label="复制 ID"><svg class="ic"><use href="#i-copy"/></svg></button>
+            <span class="vsep" aria-hidden="true"></span>
+            <svg class="ic dim" aria-hidden="true"><use href="#i-key"/></svg>
+            <span class="pw" id="pw" aria-label="一次性密码已隐藏">••••••</span>
+            <button class="icon-btn" data-act="pw-eye" aria-label="显示密码"><svg class="ic"><use href="#i-eye"/></svg></button>
+            <button class="icon-btn" data-act="pw-new" aria-label="更换密码"><svg class="ic"><use href="#i-refresh"/></svg></button>
+            <span class="grow"></span>
+            <span class="sw-label" aria-hidden="true">允许控制</span>
+            <button class="switch" role="switch" aria-checked="true" aria-label="允许远程控制本机"></button>
+          </div>
+        </div>
+
+        <div class="list-head">
+          <div class="seg glass" data-role="action" role="tablist" aria-label="设备来源">
+            <button role="tab" data-go="tab:recent">最近</button>
+            <button role="tab" data-go="tab:lan">局域网</button>
+          </div>
+        </div>
+
+        <div class="scroll">
+          <div class="tiles" role="tabpanel" aria-label="最近">
+            <article class="tile content" tabindex="0" data-name="设计部-工作站" data-id="482 113 905" aria-label="设计部-工作站，在线">
+              <div class="thumb t1"><button class="btn primary sm tile-act" data-act="connect" tabindex="-1">连接</button></div>
+              <div class="tile-meta"><i class="dot ok" aria-hidden="true"></i><b>设计部-工作站</b><span class="tid">482 113 905</span></div>
+            </article>
+            <article class="tile content" tabindex="0" data-name="家里的游戏PC" data-id="771 204 368" aria-label="家里的游戏PC，在线，经中转">
+              <div class="thumb t2"><button class="btn primary sm tile-act" data-act="connect" tabindex="-1">连接</button></div>
+              <div class="tile-meta"><i class="dot ok" aria-hidden="true"></i><b>家里的游戏PC</b><span class="tid">中转</span></div>
+            </article>
+            <article class="tile content" tabindex="0" data-name="MacBook-Pro" data-id="305 662 019" aria-label="MacBook-Pro，在线">
+              <div class="thumb t3"><button class="btn primary sm tile-act" data-act="connect" tabindex="-1">连接</button></div>
+              <div class="tile-meta"><i class="dot ok" aria-hidden="true"></i><b>MacBook-Pro</b><span class="tid">305 662 019</span></div>
+            </article>
+            <article class="tile content offline" tabindex="0" data-name="渲染节点-02" data-id="129 840 233" aria-label="渲染节点-02，离线，可唤醒">
+              <div class="thumb t4"><button class="btn sm tile-act" data-act="wake" tabindex="-1"><svg class="ic sm" aria-hidden="true"><use href="#i-zap"/></svg>唤醒</button></div>
+              <div class="tile-meta"><i class="dot off" aria-hidden="true"></i><b>渲染节点-02</b><span class="tid">3 天前</span></div>
+            </article>
+            <article class="tile content" tabindex="0" data-name="会议室-大屏" data-id="560 117 482" aria-label="会议室-大屏，在线">
+              <div class="thumb t5"><button class="btn primary sm tile-act" data-act="connect" tabindex="-1">连接</button></div>
+              <div class="tile-meta"><i class="dot ok" aria-hidden="true"></i><b>会议室-大屏</b><span class="tid">560 117 482</span></div>
+            </article>
+            <article class="tile content offline" tabindex="0" data-name="爸妈的电脑" data-id="903 551 760" aria-label="爸妈的电脑，离线">
+              <div class="thumb t6"></div>
+              <div class="tile-meta"><i class="dot off" aria-hidden="true"></i><b>爸妈的电脑</b><span class="tid">昨天</span></div>
+            </article>
+          </div>
+
+          <ul class="rows content lan" role="tabpanel" aria-label="局域网">
+            <li class="row"><span class="row-ic"><svg class="ic"><use href="#i-monitor"/></svg></span><b>STUDIO-PC</b><span class="tid">192.168.1.23</span><span class="grow"></span><button class="btn primary sm" data-act="connect" data-name="STUDIO-PC" data-id="192.168.1.23">连接</button></li>
+            <li class="row"><span class="row-ic"><svg class="ic"><use href="#i-laptop"/></svg></span><b>小米笔记本</b><span class="tid">192.168.1.41</span><span class="grow"></span><button class="btn primary sm" data-act="connect" data-name="小米笔记本" data-id="192.168.1.41">连接</button></li>
+            <li class="row"><span class="row-ic"><svg class="ic"><use href="#i-server"/></svg></span><b>NAS-客厅</b><span class="tid">192.168.1.20</span><span class="grow"></span><button class="btn primary sm" data-act="connect" data-name="NAS-客厅" data-id="192.168.1.20">连接</button></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 设备 -->
+      <section class="page page-devices" aria-labelledby="dev-h">
+        <header class="page-head">
+          <h1 id="dev-h">设备</h1>
+          <button class="btn primary" data-go="screen:pairing"><svg class="ic sm" aria-hidden="true"><use href="#i-plus"/></svg>配对</button>
+        </header>
+        <div class="scroll">
+          <ul class="rows content devs">
+            <li class="row dev">
+              <span class="row-ic"><svg class="ic"><use href="#i-laptop"/></svg></span>
+              <div class="dev-name"><b>MacBook-Pro</b><span class="tid">305 662 019</span></div>
+              <span class="dev-st"><i class="dot ok" aria-hidden="true"></i>在线</span>
+              <div class="perms" role="group" aria-label="MacBook-Pro 的权限">
+                <button class="chip-t" data-toggle aria-pressed="true">控制</button><button class="chip-t" data-toggle aria-pressed="true">文件</button><button class="chip-t" data-toggle aria-pressed="true">剪贴板</button><button class="chip-t" data-toggle aria-pressed="true">声音</button>
+              </div>
+              <button class="icon-btn revoke" data-act="revoke" aria-label="撤销 MacBook-Pro 的配对"><svg class="ic"><use href="#i-trash"/></svg></button>
+            </li>
+            <li class="row dev">
+              <span class="row-ic"><svg class="ic"><use href="#i-monitor"/></svg></span>
+              <div class="dev-name"><b>设计部-工作站</b><span class="tid">482 113 905</span></div>
+              <span class="dev-st"><i class="dot ok" aria-hidden="true"></i>在线</span>
+              <div class="perms" role="group" aria-label="设计部-工作站 的权限">
+                <button class="chip-t" data-toggle aria-pressed="true">控制</button><button class="chip-t" data-toggle aria-pressed="true">文件</button><button class="chip-t" data-toggle aria-pressed="true">剪贴板</button><button class="chip-t" data-toggle aria-pressed="false">声音</button>
+              </div>
+              <button class="icon-btn revoke" data-act="revoke" aria-label="撤销 设计部-工作站 的配对"><svg class="ic"><use href="#i-trash"/></svg></button>
+            </li>
+            <li class="row dev">
+              <span class="row-ic"><svg class="ic"><use href="#i-monitor"/></svg></span>
+              <div class="dev-name"><b>家里的游戏PC</b><span class="tid">771 204 368</span></div>
+              <span class="dev-st"><i class="dot ok" aria-hidden="true"></i>中转</span>
+              <div class="perms" role="group" aria-label="家里的游戏PC 的权限">
+                <button class="chip-t" data-toggle aria-pressed="true">控制</button><button class="chip-t" data-toggle aria-pressed="false">文件</button><button class="chip-t" data-toggle aria-pressed="true">剪贴板</button><button class="chip-t" data-toggle aria-pressed="true">声音</button>
+              </div>
+              <button class="icon-btn revoke" data-act="revoke" aria-label="撤销 家里的游戏PC 的配对"><svg class="ic"><use href="#i-trash"/></svg></button>
+            </li>
+            <li class="row dev">
+              <span class="row-ic"><svg class="ic"><use href="#i-server"/></svg></span>
+              <div class="dev-name"><b>渲染节点-02</b><span class="tid">129 840 233</span></div>
+              <span class="dev-st muted"><i class="dot off" aria-hidden="true"></i>3 天前</span>
+              <div class="perms" role="group" aria-label="渲染节点-02 的权限">
+                <button class="chip-t" data-toggle aria-pressed="true">控制</button><button class="chip-t" data-toggle aria-pressed="true">文件</button><button class="chip-t" data-toggle aria-pressed="false">剪贴板</button><button class="chip-t" data-toggle aria-pressed="false">声音</button>
+              </div>
+              <button class="icon-btn revoke" data-act="revoke" aria-label="撤销 渲染节点-02 的配对"><svg class="ic"><use href="#i-trash"/></svg></button>
+            </li>
+            <li class="row dev">
+              <span class="row-ic"><svg class="ic"><use href="#i-monitor"/></svg></span>
+              <div class="dev-name"><b>爸妈的电脑</b><span class="tid">903 551 760</span></div>
+              <span class="dev-st muted"><i class="dot off" aria-hidden="true"></i>昨天</span>
+              <div class="perms" role="group" aria-label="爸妈的电脑 的权限">
+                <button class="chip-t" data-toggle aria-pressed="true">控制</button><button class="chip-t" data-toggle aria-pressed="false">文件</button><button class="chip-t" data-toggle aria-pressed="false">剪贴板</button><button class="chip-t" data-toggle aria-pressed="false">声音</button>
+              </div>
+              <button class="icon-btn revoke" data-act="revoke" aria-label="撤销 爸妈的电脑 的配对"><svg class="ic"><use href="#i-trash"/></svg></button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 设置 -->
+      <section class="page page-settings" aria-labelledby="set-h">
+        <header class="page-head"><h1 id="set-h">设置</h1></header>
+        <div class="set-wrap">
+          <div class="subnav glass" data-role="action" role="tablist" aria-orientation="vertical" aria-label="设置分类">
+            <button role="tab" data-go="sec:quality"><svg class="ic" aria-hidden="true"><use href="#i-gauge"/></svg>画质</button>
+            <button role="tab" data-go="sec:audio"><svg class="ic" aria-hidden="true"><use href="#i-volume"/></svg>音频</button>
+            <button role="tab" data-go="sec:net"><svg class="ic" aria-hidden="true"><use href="#i-wifi"/></svg>网络</button>
+            <button role="tab" data-go="sec:sec"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>安全</button>
+            <button role="tab" data-go="sec:look"><svg class="ic" aria-hidden="true"><use href="#i-palette"/></svg>外观</button>
+          </div>
+
+          <div class="panel content scroll" role="tabpanel">
+            <section class="set-sec" data-sec="quality" aria-label="画质">
+              <div class="srow"><span>预设</span>
+                <div class="seg flat" role="radiogroup" aria-label="画质预设"><button role="radio" aria-checked="false">流畅</button><button role="radio" aria-checked="true">均衡</button><button role="radio" aria-checked="false">清晰</button></div></div>
+              <div class="srow"><span>帧率</span>
+                <div class="seg flat" role="radiogroup" aria-label="帧率"><button role="radio" aria-checked="false">60</button><button role="radio" aria-checked="true">120</button><button role="radio" aria-checked="false">144</button></div></div>
+              <div class="srow"><label for="br">码率上限</label><span class="range"><input id="br" type="range" min="5" max="80" value="40"><output for="br" id="br-out">40 Mb/s</output></span></div>
+              <div class="srow"><span>省流</span><button class="switch" role="switch" aria-checked="false" aria-label="省流"></button></div>
+              <div class="srow"><span>编码</span><span class="muted">HEVC · NVENC</span></div>
+            </section>
+
+            <section class="set-sec" data-sec="audio" aria-label="音频">
+              <div class="srow"><span>传输声音</span><button class="switch" role="switch" aria-checked="true" aria-label="传输声音"></button></div>
+              <div class="srow"><span>麦克风</span><button class="switch" role="switch" aria-checked="false" aria-label="麦克风"></button></div>
+              <div class="srow"><label for="aout">输出</label><select id="aout"><option>跟随系统</option><option>扬声器 (Realtek)</option><option>耳机 (USB)</option></select></div>
+            </section>
+
+            <section class="set-sec" data-sec="net" aria-label="网络">
+              <div class="srow"><label for="rv">信令服务器</label><input id="rv" class="field" value="rv.ashdesk.example:21116" spellcheck="false"></div>
+              <div class="srow"><span>局域网发现</span><button class="switch" role="switch" aria-checked="true" aria-label="局域网发现"></button></div>
+              <div class="srow"><span>网络唤醒</span><button class="switch" role="switch" aria-checked="true" aria-label="网络唤醒"></button></div>
+              <div class="srow"><span>线路测试</span><button class="btn">开始</button></div>
+            </section>
+
+            <section class="set-sec" data-sec="sec" aria-label="安全">
+              <div class="srow"><span>连接前确认</span><button class="switch" role="switch" aria-checked="true" aria-label="连接前确认"></button></div>
+              <div class="srow"><span>被控提示</span><button class="switch" role="switch" aria-checked="true" aria-label="被控提示"></button></div>
+              <div class="srow"><span>隐私屏</span><button class="switch" role="switch" aria-checked="false" aria-label="允许对方开启隐私屏"></button></div>
+              <div class="srow"><label for="psk">预共享密钥</label><input id="psk" class="field" type="password" value="correct-horse-battery" autocomplete="off"></div>
+              <div class="srow"><span>默认权限</span>
+                <div class="perms" role="group" aria-label="默认权限"><button class="chip-t" data-toggle aria-pressed="true">控制</button><button class="chip-t" data-toggle aria-pressed="false">文件</button><button class="chip-t" data-toggle aria-pressed="true">剪贴板</button><button class="chip-t" data-toggle aria-pressed="true">声音</button></div></div>
+            </section>
+
+            <section class="set-sec" data-sec="look" aria-label="外观">
+              <div class="srow"><span>主题</span>
+                <div class="seg flat" role="radiogroup" aria-label="主题"><button role="radio" data-go="theme:auto">跟随系统</button><button role="radio" data-go="theme:light">浅色</button><button role="radio" data-go="theme:dark">深色</button></div></div>
+              <div class="srow"><span>材质</span>
+                <div class="seg flat" role="radiogroup" aria-label="材质"><button role="radio" data-go="mat:solid">实色</button><button role="radio" data-go="mat:glass">液态玻璃</button></div></div>
+              <div class="srow"><span>玻璃质量</span>
+                <div class="seg flat" role="radiogroup" aria-label="玻璃质量"><button role="radio" data-go="q:auto">自动</button><button role="radio" data-go="q:1">节能</button><button role="radio" data-go="q:2">标准</button><button role="radio" data-go="q:3">高</button></div></div>
+              <div class="srow"><span>降低透明度</span><button class="switch" role="switch" data-flip="rt" aria-label="降低透明度"></button></div>
+              <div class="srow"><span>减少动态效果</span><button class="switch" role="switch" data-flip="rm" aria-label="减少动态效果"></button></div>
+              <div class="srow"><span>增强对比度</span><button class="switch" role="switch" data-flip="hc" aria-label="增强对比度"></button></div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="popover menu glass" data-role="pop" data-popid="mode" role="menu" aria-label="连接方式" hidden>
+      <button class="mi" role="menuitemradio" aria-checked="true">自动<svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg></button>
+      <button class="mi" role="menuitemradio" aria-checked="false">仅直连<svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg></button>
+      <button class="mi" role="menuitemradio" aria-checked="false">仅中转<svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg></button>
+      <button class="mi" role="menuitemradio" aria-checked="false">仅查看<svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg></button>
+    </div>
+
+    <!-- 连接中 -->
+    <div class="overlay ov-connecting">
+      <div class="cn-card glass" data-role="pop" role="dialog" aria-modal="true" aria-labelledby="cn-name">
+        <div class="cn-head">
+          <span class="thumb t1 mini" aria-hidden="true"></span>
+          <div><b id="cn-name">设计部-工作站</b><span class="tid" id="cn-id">482 113 905</span></div>
+        </div>
+        <ol class="steps" id="cn-steps" aria-live="polite">
+          <li><i aria-hidden="true"></i><span>寻址</span></li>
+          <li><i aria-hidden="true"></i><span>穿透</span></li>
+          <li><i aria-hidden="true"></i><span>加密握手</span></li>
+          <li><i aria-hidden="true"></i><span>首帧</span></li>
+        </ol>
+        <button class="btn" data-go="screen:home">取消</button>
+      </div>
+    </div>
+
+    <!-- 配对 -->
+    <div class="overlay ov-pairing" data-act="scrim-pair">
+      <div class="sheet glass" data-role="pop" role="dialog" aria-modal="true" aria-label="配对新设备">
+        <div class="seg flat full" role="tablist" aria-label="配对方式">
+          <button role="tab" data-go="pair:show">展示配对码</button>
+          <button role="tab" data-go="pair:enter">输入配对码</button>
+        </div>
+        <div class="pair-show">
+          <div class="code-row">
+            <span class="code" id="pair-code">381 904</span>
+            <span class="ring" aria-hidden="true"><svg viewBox="0 0 36 36"><circle class="ring-bg" cx="18" cy="18" r="15"/><circle class="ring-fg" id="ring-fg" cx="18" cy="18" r="15"/></svg><span id="pair-left">60</span></span>
+          </div>
+          <p class="hint">在另一台设备输入此码</p>
+        </div>
+        <div class="pair-enter">
+          <div class="otp" role="group" aria-label="6 位配对码">
+            <input inputmode="numeric" maxlength="1" aria-label="第 1 位"><input inputmode="numeric" maxlength="1" aria-label="第 2 位"><input inputmode="numeric" maxlength="1" aria-label="第 3 位"><input inputmode="numeric" maxlength="1" aria-label="第 4 位"><input inputmode="numeric" maxlength="1" aria-label="第 5 位"><input inputmode="numeric" maxlength="1" aria-label="第 6 位">
+          </div>
+        </div>
+        <div class="sheet-actions">
+          <button class="btn" data-go="screen:devices">取消</button>
+          <button class="btn primary pair-ok" data-go="screen:devices" disabled>配对</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 会话窗口 ========== -->
+  <section class="win win-session" aria-label="远程会话">
+    <header class="sess-bar">
+      <svg class="ic sm" aria-label="已加密" role="img"><use href="#i-lock"/></svg>
+      <span class="sess-title" id="sess-title">设计部-工作站</span>
+      <div class="caps">
+        <button class="cap cap-min" aria-label="最小化"><svg class="ic"><use href="#i-cap-min"/></svg></button>
+        <button class="cap cap-max" aria-label="最大化"><svg class="ic"><use href="#i-cap-max"/></svg></button>
+        <button class="cap cap-close" aria-label="关闭"><svg class="ic"><use href="#i-cap-close"/></svg></button>
+      </div>
+    </header>
+    <div class="video" aria-label="远程画面">
+      <div class="rd" aria-hidden="true">
+        <div class="rd-win editor">
+          <div class="rd-tb"><i></i><i></i><i></i><span>adrd_send.c</span></div>
+<pre><span class="k">static int</span> <span class="f">adrd_send_frame</span>(adrd_conn *c, <span class="k">const</span> frame *f)
+{
+    uint64_t t0 = <span class="f">clock_us</span>();
+    <span class="k">if</span> (!c-&gt;dtls_ready)
+        <span class="k">return</span> ADRD_EAGAIN;
+    <span class="k">for</span> (size_t i = <span class="n">0</span>; i &lt; f-&gt;slices; ++i) {
+        <span class="k">int</span> rc = <span class="f">fec_encode</span>(&amp;c-&gt;fec, f-&gt;slice[i]);
+        <span class="k">if</span> (rc &lt; <span class="n">0</span>)
+            <span class="k">return</span> rc;
+    }
+    c-&gt;stats.enc_us = <span class="f">clock_us</span>() - t0;
+    <span class="k">return</span> <span class="f">pacer_push</span>(&amp;c-&gt;pacer, f);
+}
+
+<span class="c">/* 120 Hz · 每帧 8.33 ms 预算 */</span>
+<span class="k">static void</span> <span class="f">on_vsync</span>(adrd_conn *c)
+{
+    frame *f = <span class="f">capture_next</span>(c-&gt;dup);
+    <span class="k">if</span> (f) <span class="f">adrd_send_frame</span>(c, f);
+}</pre>
+        </div>
+        <div class="rd-win photo"><div class="rd-tb light"><i></i><i></i><i></i><span>海边.jpg</span></div><div class="ph"><i class="sun"></i><i class="m1"></i><i class="m2"></i></div></div>
+        <div class="rd-task"><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+
+      <div class="toolbar glass" data-role="action" role="toolbar" aria-label="会话工具栏">
+        <button class="path-chip" data-flip="hud" aria-label="链路与性能"><i class="dot ok" aria-hidden="true"></i><span>直连 · <span id="lat">4</span> ms</span></button>
+        <span class="tb-sep" aria-hidden="true"></span>
+        <button class="icon-btn" data-pop="quality" aria-haspopup="dialog" aria-label="画质"><svg class="ic"><use href="#i-gauge"/></svg></button>
+        <button class="icon-btn" data-pop="monitor" aria-haspopup="dialog" aria-label="显示器"><svg class="ic"><use href="#i-monitor"/></svg></button>
+        <button class="icon-btn" data-pop="keys" aria-haspopup="dialog" aria-label="键盘与快捷键"><svg class="ic"><use href="#i-keyboard"/></svg></button>
+        <button class="icon-btn" data-pop="files" aria-haspopup="dialog" aria-label="文件传输"><svg class="ic"><use href="#i-folder"/></svg></button>
+        <button class="icon-btn" data-toggle aria-pressed="true" aria-label="声音"><svg class="ic"><use href="#i-volume"/></svg></button>
+        <button class="icon-btn mic" data-toggle aria-pressed="false" aria-label="麦克风"><svg class="ic off"><use href="#i-mic-off"/></svg><svg class="ic on"><use href="#i-mic"/></svg></button>
+        <button class="icon-btn" data-toggle aria-pressed="false" aria-label="省流"><svg class="ic"><use href="#i-leaf"/></svg></button>
+        <button class="icon-btn" data-flip="fs" aria-label="全屏"><svg class="ic"><use href="#i-expand"/></svg></button>
+        <span class="tb-sep" aria-hidden="true"></span>
+        <button class="icon-btn danger" data-go="screen:home" aria-label="断开"><svg class="ic"><use href="#i-power"/></svg></button>
+        <button class="icon-btn" data-go="tb:0" aria-label="收起工具栏"><svg class="ic"><use href="#i-chev-up"/></svg></button>
+      </div>
+      <button class="tb-handle" data-go="tb:1" aria-label="展开工具栏"><i class="dot ok" aria-hidden="true"></i><svg class="ic sm" aria-hidden="true"><use href="#i-chev-down"/></svg></button>
+
+      <div class="popover glass" data-role="pop" data-popid="quality" role="dialog" aria-label="画质" hidden>
+        <div class="seg flat full" role="radiogroup" aria-label="画质预设"><button role="radio" aria-checked="false">流畅</button><button role="radio" aria-checked="true">均衡</button><button role="radio" aria-checked="false">清晰</button></div>
+        <div class="prow"><span>帧率</span><div class="seg flat" role="radiogroup" aria-label="帧率"><button role="radio" aria-checked="false">60</button><button role="radio" aria-checked="true">120</button><button role="radio" aria-checked="false">144</button></div></div>
+        <div class="prow"><label for="res">分辨率</label><select id="res"><option>原始 2560×1440</option><option>1920×1080</option><option>自适应窗口</option></select></div>
+      </div>
+      <div class="popover glass" data-role="pop" data-popid="monitor" role="dialog" aria-label="显示器" hidden>
+        <div class="mons" role="radiogroup" aria-label="选择显示器">
+          <button class="mon wide" role="radio" aria-checked="true"><b>1</b><span>2560×1440</span></button>
+          <button class="mon" role="radio" aria-checked="false"><b>2</b><span>1920×1080</span></button>
+        </div>
+        <div class="prow"><span>虚拟显示器</span><button class="switch" role="switch" aria-checked="false" aria-label="虚拟显示器"></button></div>
+      </div>
+      <div class="popover glass" data-role="pop" data-popid="keys" role="dialog" aria-label="键盘与快捷键" hidden>
+        <button class="mi">发送 <kbd class="k-cad">Ctrl+Alt+Del</kbd></button>
+        <button class="mi">发送 <kbd class="k-win">Win</kbd></button>
+        <button class="mi">发送 <kbd>PrtSc</kbd></button>
+        <div class="prow"><span>捕获系统快捷键</span><button class="switch" role="switch" aria-checked="true" aria-label="捕获系统快捷键"></button></div>
+        <div class="prow"><span>输入法</span><div class="seg flat" role="radiogroup" aria-label="输入法位置"><button role="radio" aria-checked="true">本地</button><button role="radio" aria-checked="false">远程</button></div></div>
+      </div>
+      <div class="popover glass" data-role="pop" data-popid="files" role="dialog" aria-label="文件传输" hidden>
+        <button class="drop"><svg class="ic" aria-hidden="true"><use href="#i-upload"/></svg>拖放或选择文件</button>
+        <div class="xfer"><span class="xn">设计稿_v3.fig</span><span class="xs">64%</span><progress max="100" value="64" aria-label="设计稿_v3.fig 进度"></progress></div>
+        <div class="xfer"><span class="xn">日志.zip</span><span class="xs ok-t"><svg class="ic sm" aria-label="完成" role="img"><use href="#i-check"/></svg></span><progress max="100" value="100" aria-label="日志.zip 进度"></progress></div>
+      </div>
+
+      <dl class="hud" aria-label="性能信息">
+        <dt>RTT</dt><dd><span id="h-rtt">4</span> ms</dd>
+        <dt>FPS</dt><dd id="h-fps">120</dd>
+        <dt>码率</dt><dd><span id="h-br">38.2</span> Mb/s</dd>
+        <dt>解码</dt><dd><span id="h-dec">1.1</span> ms</dd>
+        <dt>丢包</dt><dd><span id="h-loss">0.0</span> %</dd>
+        <dt>编码</dt><dd>HEVC</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ========== 被控端 ========== -->
+  <section class="host" aria-label="被控端桌面">
+    <div class="host-screen">
+      <div class="hd-bar" aria-hidden="true"></div>
+      <div class="hd-win" aria-hidden="true"><div class="hd-tb"></div><i></i><i></i><i></i><i class="short"></i><i></i><i class="short"></i></div>
+      <div class="curtain" id="curtain" hidden><svg class="ic" aria-hidden="true"><use href="#i-eye-off"/></svg>隐私屏</div>
+    </div>
+
+    <div class="req" role="alertdialog" aria-modal="true" aria-labelledby="req-title" aria-describedby="req-warn">
+      <div class="req-head">
+        <span class="req-av" aria-hidden="true"><svg class="ic"><use href="#i-laptop"/></svg></span>
+        <div>
+          <h2 id="req-title">MacBook-Pro 请求控制此电脑</h2>
+          <p class="req-meta"><svg class="ic sm" aria-hidden="true"><use href="#i-server"/></svg>中转 · 203.0.113.24<span class="chip warn">首次连接</span></p>
+        </div>
+      </div>
+      <div class="perms" role="group" aria-label="授予的权限">
+        <button class="chip-t" data-toggle aria-pressed="true">控制</button><button class="chip-t" data-toggle aria-pressed="false">文件</button><button class="chip-t" data-toggle aria-pressed="true">剪贴板</button><button class="chip-t" data-toggle aria-pressed="true">声音</button>
+      </div>
+      <p class="req-warn" id="req-warn"><svg class="ic sm" aria-hidden="true"><use href="#i-warn"/></svg>对方自称客服、银行或警方时，请拒绝</p>
+      <div class="req-actions">
+        <button class="btn" id="req-reject" data-act="reject">拒绝 <span class="count" id="req-count">30</span></button>
+        <button class="btn primary" data-act="accept">接受</button>
+      </div>
+    </div>
+
+    <div class="banner" role="status">
+      <i class="pulse" aria-hidden="true"></i>
+      <span>MacBook-Pro 正在控制</span>
+      <span class="timer" id="ctl-timer">12:04</span>
+      <button class="icon-btn" data-act="curtain" aria-pressed="false" aria-label="隐私屏"><svg class="ic"><use href="#i-eye-off"/></svg></button>
+      <button class="icon-btn" data-toggle aria-pressed="false" aria-label="暂停对方输入"><svg class="ic"><use href="#i-pause"/></svg></button>
+      <button class="btn danger sm" data-go="screen:home">断开</button>
+    </div>
+  </section>
+</main>
+
+<script src="glass.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

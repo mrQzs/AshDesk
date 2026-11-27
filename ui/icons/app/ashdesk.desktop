@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=AshDesk
+Name[zh_CN]=极帧
+Exec=ashdesk
+Icon=ashdesk
+Terminal=false
+Categories=Network;RemoteAccess;

@@ -1,0 +1,2 @@
+tools/check_glass.sh: line 5: set: pipefail
+: invalid option name

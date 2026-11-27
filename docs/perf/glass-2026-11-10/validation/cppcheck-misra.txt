@@ -1,0 +1,4 @@
+Cppcheck（全部自写 C）：214 条；比基线新增 1 条、减少 0 条
+  新增 tests/gtest/desktop_ui_test.cpp  syntaxError：0 → 1
+      tests/gtest/desktop_ui_test.cpp:107: syntax error
+MISRA C:2012（12 个可移植文件）：2481 条；比基线新增 0 条、减少 0 条

@@ -1,0 +1,13 @@
+'vswhere.exe' is not recognized as an internal or external command,
+operable program or batch file.
+[0/1] Re-running CMake...
+-- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR) 
+-- Configuring done (0.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: D:/Code/AetherDesk/build
+[1/10] Automatic MOC for target ashdesk_widgets
+[2/7] Building C object CMakeFiles\test_glass.dir\tests\test_glass.c.obj
+[3/7] Building CXX object CMakeFiles\ashdesk_ui_tests.dir\tests\gtest\glass_benchmark_test.cpp.obj
+[4/7] Linking C executable test_glass.exe
+[5/7] Building CXX object CMakeFiles\ashdesk_ui_tests.dir\tests\gtest\desktop_ui_test.cpp.obj
+[6/7] Linking CXX executable ashdesk_ui_tests.exe

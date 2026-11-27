@@ -1,0 +1,4 @@
+'vswhere.exe' is not recognized as an internal or external command,
+operable program or batch file.
+[1/2] Building CXX object CMakeFiles\ashdesk_ui_tests.dir\tests\gtest\glass_benchmark_test.cpp.obj
+[2/2] Linking CXX executable ashdesk_ui_tests.exe

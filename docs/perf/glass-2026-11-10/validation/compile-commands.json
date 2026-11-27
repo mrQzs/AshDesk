@@ -1,0 +1,60 @@
+{
+  "before": [
+    {
+      "directory": "D:/Code/AetherDesk/build/glass-final/before",
+      "command": "C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -ID:\\Code\\AetherDesk\\build\\glass-final\\before\\ashdesk_widgets_autogen\\include -ID:\\Code\\AetherDesk\\build\\glass-final\\source-before\\ui -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtWidgets -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtCore -external:IC:\\Qt\\6.10.1\\msvc2022_64\\mkspecs\\win32-msvc -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtGui -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtNetwork -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtSvg -external:W0 /DWIN32 /D_WINDOWS /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD /utf-8 /W4 /WX /fp:precise /GS /D_CRT_SECURE_NO_WARNINGS -Zc:__cplusplus -permissive- -utf-8 /FoCMakeFiles\\ashdesk_widgets.dir\\ui\\liquid_glass.cpp.obj /FdCMakeFiles\\ashdesk_widgets.dir\\ashdesk_widgets.pdb /FS -c D:\\Code\\AetherDesk\\build\\glass-final\\source-before\\ui\\liquid_glass.cpp",
+      "file": "D:/Code/AetherDesk/build/glass-final/source-before/ui/liquid_glass.cpp",
+      "output": "D:/Code/AetherDesk/build/glass-final/before/CMakeFiles/ashdesk_widgets.dir/ui/liquid_glass.cpp.obj"
+    },
+    {
+      "directory": "D:/Code/AetherDesk/build/glass-final/before",
+      "command": "C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"D:/Code/AetherDesk/build/glass-final/before\\\" -DQT_TESTCASE_SOURCEDIR=\\\"D:/Code/AetherDesk/build/glass-final/source-before\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -ID:\\Code\\AetherDesk\\build\\glass-final\\source-before\\ui -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtWidgets -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtCore -external:IC:\\Qt\\6.10.1\\msvc2022_64\\mkspecs\\win32-msvc -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtGui -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtNetwork -external:ID:\\Code\\AetherDesk\\build\\glass-final\\source-before\\third_party\\googletest\\include -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtTest -external:W0 /DWIN32 /D_WINDOWS /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD /utf-8 /W4 /WX /fp:precise /GS /D_CRT_SECURE_NO_WARNINGS -Zc:__cplusplus -permissive- -utf-8 /FoCMakeFiles\\ashdesk_ui_tests.dir\\tests\\gtest\\desktop_ui_test.cpp.obj /FdCMakeFiles\\ashdesk_ui_tests.dir\\ /FS -c D:\\Code\\AetherDesk\\build\\glass-final\\source-before\\tests\\gtest\\desktop_ui_test.cpp",
+      "file": "D:/Code/AetherDesk/build/glass-final/source-before/tests/gtest/desktop_ui_test.cpp",
+      "output": "D:/Code/AetherDesk/build/glass-final/before/CMakeFiles/ashdesk_ui_tests.dir/tests/gtest/desktop_ui_test.cpp.obj"
+    },
+    {
+      "directory": "D:/Code/AetherDesk/build/glass-final/before",
+      "command": "C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"D:/Code/AetherDesk/build/glass-final/before\\\" -DQT_TESTCASE_SOURCEDIR=\\\"D:/Code/AetherDesk/build/glass-final/source-before\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -ID:\\Code\\AetherDesk\\build\\glass-final\\source-before\\ui -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtWidgets -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtCore -external:IC:\\Qt\\6.10.1\\msvc2022_64\\mkspecs\\win32-msvc -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtGui -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtNetwork -external:ID:\\Code\\AetherDesk\\build\\glass-final\\source-before\\third_party\\googletest\\include -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtTest -external:W0 /DWIN32 /D_WINDOWS /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD /utf-8 /W4 /WX /fp:precise /GS /D_CRT_SECURE_NO_WARNINGS -Zc:__cplusplus -permissive- -utf-8 /FoCMakeFiles\\ashdesk_ui_tests.dir\\tests\\gtest\\glass_benchmark_test.cpp.obj /FdCMakeFiles\\ashdesk_ui_tests.dir\\ /FS -c D:\\Code\\AetherDesk\\build\\glass-final\\source-before\\tests\\gtest\\glass_benchmark_test.cpp",
+      "file": "D:/Code/AetherDesk/build/glass-final/source-before/tests/gtest/glass_benchmark_test.cpp",
+      "output": "D:/Code/AetherDesk/build/glass-final/before/CMakeFiles/ashdesk_ui_tests.dir/tests/gtest/glass_benchmark_test.cpp.obj"
+    }
+  ],
+  "after": [
+    {
+      "directory": "D:/Code/AetherDesk/build/glass-final/after",
+      "command": "C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DAD_GLASS_ASM_X64 -ID:\\Code\\AetherDesk\\core\\kernels /DWIN32 /D_WINDOWS /Zi /O2 /Ob1 /DNDEBUG -std:c17 -MD /utf-8 /W4 /WX /fp:precise /GS /D_CRT_SECURE_NO_WARNINGS /FoCMakeFiles\\adrd_glass.dir\\core\\kernels\\ad_glass.c.obj /FdCMakeFiles\\adrd_glass.dir\\adrd_glass.pdb /FS -c D:\\Code\\AetherDesk\\core\\kernels\\ad_glass.c",
+      "file": "D:/Code/AetherDesk/core/kernels/ad_glass.c",
+      "output": "D:/Code/AetherDesk/build/glass-final/after/CMakeFiles/adrd_glass.dir/core/kernels/ad_glass.c.obj"
+    },
+    {
+      "directory": "D:/Code/AetherDesk/build/glass-final/after",
+      "command": "C:\\PROGRA~1\\NASM\\nasm.exe -DAD_GLASS_ASM_X64 -ID:\\Code\\AetherDesk\\core\\kernels  -DAD_WIN64 -f win64 -o CMakeFiles\\adrd_glass.dir\\core\\kernels\\ad_glass_x64.asm.obj D:\\Code\\AetherDesk\\core\\kernels\\ad_glass_x64.asm",
+      "file": "D:/Code/AetherDesk/core/kernels/ad_glass_x64.asm",
+      "output": "D:/Code/AetherDesk/build/glass-final/after/CMakeFiles/adrd_glass.dir/core/kernels/ad_glass_x64.asm.obj"
+    },
+    {
+      "directory": "D:/Code/AetherDesk/build/glass-final/after",
+      "command": "C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -ID:\\Code\\AetherDesk\\core\\kernels /DWIN32 /D_WINDOWS /Zi /O2 /Ob1 /DNDEBUG -std:c17 -MD /utf-8 /W4 /WX /fp:precise /GS /D_CRT_SECURE_NO_WARNINGS /FoCMakeFiles\\test_glass.dir\\tests\\test_glass.c.obj /FdCMakeFiles\\test_glass.dir\\ /FS -c D:\\Code\\AetherDesk\\tests\\test_glass.c",
+      "file": "D:/Code/AetherDesk/tests/test_glass.c",
+      "output": "D:/Code/AetherDesk/build/glass-final/after/CMakeFiles/test_glass.dir/tests/test_glass.c.obj"
+    },
+    {
+      "directory": "D:/Code/AetherDesk/build/glass-final/after",
+      "command": "C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -ID:\\Code\\AetherDesk\\build\\glass-final\\after\\ashdesk_widgets_autogen\\include -ID:\\Code\\AetherDesk\\ui -ID:\\Code\\AetherDesk\\core\\kernels -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtWidgets -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtCore -external:IC:\\Qt\\6.10.1\\msvc2022_64\\mkspecs\\win32-msvc -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtGui -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtNetwork -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtSvg -external:W0 /DWIN32 /D_WINDOWS /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD /utf-8 /W4 /WX /fp:precise /GS /D_CRT_SECURE_NO_WARNINGS -Zc:__cplusplus -permissive- -utf-8 /FoCMakeFiles\\ashdesk_widgets.dir\\ui\\liquid_glass.cpp.obj /FdCMakeFiles\\ashdesk_widgets.dir\\ashdesk_widgets.pdb /FS -c D:\\Code\\AetherDesk\\ui\\liquid_glass.cpp",
+      "file": "D:/Code/AetherDesk/ui/liquid_glass.cpp",
+      "output": "D:/Code/AetherDesk/build/glass-final/after/CMakeFiles/ashdesk_widgets.dir/ui/liquid_glass.cpp.obj"
+    },
+    {
+      "directory": "D:/Code/AetherDesk/build/glass-final/after",
+      "command": "C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"D:/Code/AetherDesk/build/glass-final/after\\\" -DQT_TESTCASE_SOURCEDIR=\\\"D:/Code/AetherDesk\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -ID:\\Code\\AetherDesk\\ui -ID:\\Code\\AetherDesk\\core\\kernels -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtWidgets -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtCore -external:IC:\\Qt\\6.10.1\\msvc2022_64\\mkspecs\\win32-msvc -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtGui -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtNetwork -external:ID:\\Code\\AetherDesk\\third_party\\googletest\\include -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtTest -external:W0 /DWIN32 /D_WINDOWS /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD /utf-8 /W4 /WX /fp:precise /GS /D_CRT_SECURE_NO_WARNINGS -Zc:__cplusplus -permissive- -utf-8 /FoCMakeFiles\\ashdesk_ui_tests.dir\\tests\\gtest\\desktop_ui_test.cpp.obj /FdCMakeFiles\\ashdesk_ui_tests.dir\\ /FS -c D:\\Code\\AetherDesk\\tests\\gtest\\desktop_ui_test.cpp",
+      "file": "D:/Code/AetherDesk/tests/gtest/desktop_ui_test.cpp",
+      "output": "D:/Code/AetherDesk/build/glass-final/after/CMakeFiles/ashdesk_ui_tests.dir/tests/gtest/desktop_ui_test.cpp.obj"
+    },
+    {
+      "directory": "D:/Code/AetherDesk/build/glass-final/after",
+      "command": "C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"D:/Code/AetherDesk/build/glass-final/after\\\" -DQT_TESTCASE_SOURCEDIR=\\\"D:/Code/AetherDesk\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -ID:\\Code\\AetherDesk\\ui -ID:\\Code\\AetherDesk\\core\\kernels -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtWidgets -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtCore -external:IC:\\Qt\\6.10.1\\msvc2022_64\\mkspecs\\win32-msvc -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtGui -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtNetwork -external:ID:\\Code\\AetherDesk\\third_party\\googletest\\include -external:IC:\\Qt\\6.10.1\\msvc2022_64\\include\\QtTest -external:W0 /DWIN32 /D_WINDOWS /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD /utf-8 /W4 /WX /fp:precise /GS /D_CRT_SECURE_NO_WARNINGS -Zc:__cplusplus -permissive- -utf-8 /FoCMakeFiles\\ashdesk_ui_tests.dir\\tests\\gtest\\glass_benchmark_test.cpp.obj /FdCMakeFiles\\ashdesk_ui_tests.dir\\ /FS -c D:\\Code\\AetherDesk\\tests\\gtest\\glass_benchmark_test.cpp",
+      "file": "D:/Code/AetherDesk/tests/gtest/glass_benchmark_test.cpp",
+      "output": "D:/Code/AetherDesk/build/glass-final/after/CMakeFiles/ashdesk_ui_tests.dir/tests/gtest/glass_benchmark_test.cpp.obj"
+    }
+  ]
+}

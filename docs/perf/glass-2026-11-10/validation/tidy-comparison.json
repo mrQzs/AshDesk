@@ -1,0 +1,3293 @@
+{
+  "defects-before": {
+    "command": [
+      "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\Llvm\\x64\\bin\\clang-tidy.exe",
+      "--quiet",
+      "-p",
+      "D:\\Code\\AetherDesk\\build\\glass-proof\\before",
+      "(.clang-tidy)"
+    ],
+    "units": [
+      "ui/liquid_glass.cpp",
+      "tests/gtest/desktop_ui_test.cpp"
+    ],
+    "findings": []
+  },
+  "defects-after": {
+    "command": [
+      "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\Llvm\\x64\\bin\\clang-tidy.exe",
+      "--quiet",
+      "-p",
+      "D:\\Code\\AetherDesk\\build\\glass-proof\\after",
+      "(.clang-tidy)"
+    ],
+    "units": [
+      "ui/liquid_glass.cpp",
+      "tests/gtest/desktop_ui_test.cpp",
+      "core/kernels/ad_glass.c",
+      "tests/test_glass.c",
+      "tests/gtest/glass_benchmark_test.cpp"
+    ],
+    "findings": []
+  },
+  "defects-increases": [],
+  "autosar-before": {
+    "command": [
+      "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\Llvm\\x64\\bin\\clang-tidy.exe",
+      "--quiet",
+      "-p",
+      "D:\\Code\\AetherDesk\\build\\glass-proof\\before",
+      "--checks=-*,cppcoreguidelines-avoid-magic-numbers,cppcoreguidelines-pro-type-cstyle-cast,cppcoreguidelines-pro-type-const-cast,cppcoreguidelines-pro-type-reinterpret-cast,cppcoreguidelines-pro-bounds-pointer-arithmetic,cppcoreguidelines-avoid-c-arrays,cppcoreguidelines-pro-type-vararg,cppcoreguidelines-special-member-functions,cppcoreguidelines-pro-type-member-init,cppcoreguidelines-owning-memory,misc-const-correctness,misc-non-private-member-variables-in-classes,misc-use-anonymous-namespace,readability-braces-around-statements,readability-isolate-declaration,readability-uppercase-literal-suffix,readability-implicit-bool-conversion,modernize-use-using,bugprone-*,clang-analyzer-*,cert-*"
+    ],
+    "units": [
+      "ui/liquid_glass.cpp",
+      "tests/gtest/desktop_ui_test.cpp"
+    ],
+    "findings": [
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 41,
+        "column": 46,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "5000 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 41,
+        "column": 51,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 41,
+        "column": 65,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "10 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 48,
+        "column": 17,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 73,
+        "column": 11,
+        "rule": "cppcoreguidelines-avoid-c-arrays",
+        "message": "do not declare C-style arrays, use std::array<> instead"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 81,
+        "column": 29,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 83,
+        "column": 26,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "20 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 87,
+        "column": 22,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "20 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 95,
+        "column": 77,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "95 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 96,
+        "column": 25,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 98,
+        "column": 54,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "100 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 98,
+        "column": 62,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "1e6 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 126,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 134,
+        "column": 19,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "120 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 155,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 160,
+        "column": 18,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "30 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 164,
+        "column": 25,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 172,
+        "column": 30,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 173,
+        "column": 19,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "640 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 173,
+        "column": 24,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "480 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 174,
+        "column": 18,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "30 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 177,
+        "column": 25,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 179,
+        "column": 22,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "10 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 193,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 199,
+        "column": 53,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "44202 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 200,
+        "column": 52,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "120 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 216,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 255,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 265,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'stats' of type 'ashdesk::GlassStats &' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 278,
+        "column": 57,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "50 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 283,
+        "column": 5,
+        "rule": "cppcoreguidelines-pro-type-vararg",
+        "message": "do not call c-style vararg functions"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 284,
+        "column": 116,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "1e6 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 285,
+        "column": 87,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "1024 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 288,
+        "column": 23,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "1120 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 288,
+        "column": 30,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "8 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 288,
+        "column": 43,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "740 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 294,
+        "column": 18,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "30 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 297,
+        "column": 19,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "640 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 297,
+        "column": 24,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "480 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 298,
+        "column": 18,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "30 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 300,
+        "column": 25,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 300,
+        "column": 31,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'QScrollBar *' -> 'bool'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 302,
+        "column": 22,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "10 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 304,
+        "column": 13,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'QScrollArea *' -> 'bool'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 304,
+        "column": 66,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 315,
+        "column": 5,
+        "rule": "cppcoreguidelines-pro-type-vararg",
+        "message": "do not call c-style vararg functions"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 320,
+        "column": 5,
+        "rule": "cppcoreguidelines-pro-type-vararg",
+        "message": "do not call c-style vararg functions"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 324,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 352,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 357,
+        "column": 47,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 366,
+        "column": 25,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "10 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 366,
+        "column": 32,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'QPushButton *' -> 'bool'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 391,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 406,
+        "column": 37,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 426,
+        "column": 37,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 427,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 450,
+        "column": 38,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "1000 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 451,
+        "column": 26,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "150 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 467,
+        "column": 33,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 469,
+        "column": 9,
+        "rule": "cert-err33-c",
+        "message": "the value returned by this function should not be disregarded; neglecting it may lead to errors"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 470,
+        "column": 9,
+        "rule": "cppcoreguidelines-avoid-c-arrays",
+        "message": "do not declare C-style arrays, use std::array<> instead"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 470,
+        "column": 22,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "16 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 471,
+        "column": 14,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'char *' -> 'bool'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 471,
+        "column": 96,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 475,
+        "column": 33,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 476,
+        "column": 9,
+        "rule": "cert-err33-c",
+        "message": "the value returned by this function should not be disregarded; neglecting it may lead to errors"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 477,
+        "column": 16,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "23 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 480,
+        "column": 43,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 481,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'application' of type 'QApplication' can be declared 'const'"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 9,
+        "column": 13,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'host' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 10,
+        "column": 9,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'port' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 15,
+        "column": 9,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'theme' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 16,
+        "column": 9,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'material' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 17,
+        "column": 9,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'authentication' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 18,
+        "column": 13,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'keyFile' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 19,
+        "column": 9,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'port' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 20,
+        "column": 9,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'fps' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 21,
+        "column": 9,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'bitrate' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 22,
+        "column": 10,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'audio' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 23,
+        "column": 10,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'microphone' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 24,
+        "column": 10,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'clipboard' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 25,
+        "column": 10,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'files' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 26,
+        "column": 10,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'viewOnly' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 27,
+        "column": 10,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'metered' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 28,
+        "column": 10,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'hostControl' has public visibility"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 18,
+        "column": 24,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 18,
+        "column": 31,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 19,
+        "column": 28,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 20,
+        "column": 29,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 21,
+        "column": 31,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 22,
+        "column": 29,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 23,
+        "column": 31,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 28,
+        "column": 28,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 29,
+        "column": 28,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 32,
+        "column": 33,
+        "rule": "bugprone-easily-swappable-parameters",
+        "message": "2 adjacent parameters of 'rgba' of convertible types are easily swapped by mistake"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 38,
+        "column": 8,
+        "rule": "cppcoreguidelines-pro-type-member-init",
+        "message": "constructor does not initialize these fields: specular, backSpecular"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 94,
+        "column": 11,
+        "rule": "cppcoreguidelines-avoid-c-arrays",
+        "message": "do not declare C-style arrays, use std::array<> instead"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 105,
+        "column": 5,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 107,
+        "column": 43,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "160 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 111,
+        "column": 27,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".94 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 111,
+        "column": 36,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".92 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 111,
+        "column": 47,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".50 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 111,
+        "column": 56,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".60 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 111,
+        "column": 79,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".7 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 112,
+        "column": 27,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".10 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 112,
+        "column": 36,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".06 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 112,
+        "column": 47,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".55 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 112,
+        "column": 56,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".50 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 112,
+        "column": 78,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".7 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 113,
+        "column": 12,
+        "rule": "cppcoreguidelines-pro-type-member-init",
+        "message": "constructor does not initialize these fields: left, width, glow"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 118,
+        "column": 11,
+        "rule": "cppcoreguidelines-avoid-c-arrays",
+        "message": "do not declare C-style arrays, use std::array<> instead"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 125,
+        "column": 59,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 126,
+        "column": 24,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "24 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 127,
+        "column": 23,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 143,
+        "column": 5,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 146,
+        "column": 39,
+        "rule": "bugprone-easily-swappable-parameters",
+        "message": "2 adjacent parameters of 'operator()' of convertible types are easily swapped by mistake"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 147,
+        "column": 40,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 147,
+        "column": 59,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 149,
+        "column": 9,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 156,
+        "column": 48,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 158,
+        "column": 13,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 164,
+        "column": 41,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 164,
+        "column": 47,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 165,
+        "column": 22,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 167,
+        "column": 40,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 167,
+        "column": 51,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 181,
+        "column": 64,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "255 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 189,
+        "column": 21,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 191,
+        "column": 53,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 191,
+        "column": 76,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 191,
+        "column": 98,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 192,
+        "column": 13,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 199,
+        "column": 60,
+        "rule": "bugprone-easily-swappable-parameters",
+        "message": "2 adjacent parameters of 'dropShadow' of similar type ('qreal') are easily swapped by mistake"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 219,
+        "column": 50,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".6 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 222,
+        "column": 52,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 222,
+        "column": 66,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 222,
+        "column": 71,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 222,
+        "column": 75,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 222,
+        "column": 79,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 222,
+        "column": 93,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 222,
+        "column": 106,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 228,
+        "column": 5,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 229,
+        "column": 23,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 230,
+        "column": 23,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 231,
+        "column": 5,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 232,
+        "column": 5,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 233,
+        "column": 5,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 234,
+        "column": 23,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 235,
+        "column": 26,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 237,
+        "column": 45,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 237,
+        "column": 84,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 238,
+        "column": 45,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 238,
+        "column": 87,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 245,
+        "column": 63,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 245,
+        "column": 68,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 251,
+        "column": 25,
+        "rule": "bugprone-easily-swappable-parameters",
+        "message": "2 adjacent parameters of 'travel' of similar type ('float') are easily swapped by mistake"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 252,
+        "column": 50,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 258,
+        "column": 14,
+        "rule": "bugprone-easily-swappable-parameters",
+        "message": "2 adjacent parameters of 'lighten' of convertible types are easily swapped by mistake"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 259,
+        "column": 54,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "255 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 268,
+        "column": 25,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "120 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 270,
+        "column": 45,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 275,
+        "column": 22,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 276,
+        "column": 81,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 289,
+        "column": 84,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 292,
+        "column": 93,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 316,
+        "column": 109,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 318,
+        "column": 9,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 336,
+        "column": 20,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 339,
+        "column": 61,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 345,
+        "column": 23,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'GlassSurface *' -> 'bool'"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 348,
+        "column": 10,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'GlassSurface *' -> 'bool'"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 349,
+        "column": 36,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 350,
+        "column": 35,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'GlassSurface *' -> 'bool'"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 355,
+        "column": 65,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 367,
+        "column": 28,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 376,
+        "column": 30,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 378,
+        "column": 96,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 386,
+        "column": 44,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'QWidget *' -> 'bool'"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 386,
+        "column": 84,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 387,
+        "column": 64,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 398,
+        "column": 5,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 408,
+        "column": 31,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".18 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 408,
+        "column": 51,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".25 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 408,
+        "column": 73,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "1.4 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 408,
+        "column": 92,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".9 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 409,
+        "column": 36,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".55 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 410,
+        "column": 46,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "160 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 412,
+        "column": 24,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".38 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 413,
+        "column": 24,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".55 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 414,
+        "column": 24,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".85 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 418,
+        "column": 46,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 418,
+        "column": 50,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 418,
+        "column": 55,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 418,
+        "column": 60,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 418,
+        "column": 74,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 418,
+        "column": 87,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 425,
+        "column": 5,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 427,
+        "column": 62,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 427,
+        "column": 69,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 429,
+        "column": 58,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 429,
+        "column": 64,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 434,
+        "column": 25,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 445,
+        "column": 59,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 445,
+        "column": 78,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 446,
+        "column": 68,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 447,
+        "column": 31,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 448,
+        "column": 13,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 459,
+        "column": 71,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5f is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 459,
+        "column": 82,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 459,
+        "column": 87,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 460,
+        "column": 54,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 460,
+        "column": 59,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 465,
+        "column": 17,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 471,
+        "column": 79,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "1e-4f is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 471,
+        "column": 79,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 477,
+        "column": 53,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 478,
+        "column": 67,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 478,
+        "column": 73,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 479,
+        "column": 72,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 479,
+        "column": 78,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 480,
+        "column": 29,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "0.004f is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 480,
+        "column": 29,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 480,
+        "column": 36,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 480,
+        "column": 37,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 480,
+        "column": 58,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 480,
+        "column": 86,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 493,
+        "column": 5,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 500,
+        "column": 5,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 502,
+        "column": 30,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 503,
+        "column": 24,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 503,
+        "column": 54,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 504,
+        "column": 36,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 504,
+        "column": 37,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 504,
+        "column": 49,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 508,
+        "column": 24,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 508,
+        "column": 24,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 508,
+        "column": 54,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 513,
+        "column": 9,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 528,
+        "column": 32,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "255 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 546,
+        "column": 61,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 546,
+        "column": 65,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 546,
+        "column": 70,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 546,
+        "column": 75,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.h",
+        "line": 18,
+        "column": 24,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "128 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.h",
+        "line": 72,
+        "column": 15,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'size' has public visibility"
+      },
+      {
+        "file": "ui/liquid_glass.h",
+        "line": 73,
+        "column": 15,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'dpr' has public visibility"
+      },
+      {
+        "file": "ui/liquid_glass.h",
+        "line": 74,
+        "column": 14,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'dark' has public visibility"
+      },
+      {
+        "file": "ui/liquid_glass.h",
+        "line": 75,
+        "column": 18,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'material' has public visibility"
+      }
+    ]
+  },
+  "autosar-after": {
+    "command": [
+      "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\Llvm\\x64\\bin\\clang-tidy.exe",
+      "--quiet",
+      "-p",
+      "D:\\Code\\AetherDesk\\build\\glass-proof\\after",
+      "--checks=-*,cppcoreguidelines-avoid-magic-numbers,cppcoreguidelines-pro-type-cstyle-cast,cppcoreguidelines-pro-type-const-cast,cppcoreguidelines-pro-type-reinterpret-cast,cppcoreguidelines-pro-bounds-pointer-arithmetic,cppcoreguidelines-avoid-c-arrays,cppcoreguidelines-pro-type-vararg,cppcoreguidelines-special-member-functions,cppcoreguidelines-pro-type-member-init,cppcoreguidelines-owning-memory,misc-const-correctness,misc-non-private-member-variables-in-classes,misc-use-anonymous-namespace,readability-braces-around-statements,readability-isolate-declaration,readability-uppercase-literal-suffix,readability-implicit-bool-conversion,modernize-use-using,bugprone-*,clang-analyzer-*,cert-*"
+    ],
+    "units": [
+      "ui/liquid_glass.cpp",
+      "tests/gtest/desktop_ui_test.cpp",
+      "tests/gtest/glass_benchmark_test.cpp"
+    ],
+    "findings": [
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 41,
+        "column": 46,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "5000 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 41,
+        "column": 51,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 41,
+        "column": 65,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "10 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 48,
+        "column": 17,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 73,
+        "column": 11,
+        "rule": "cppcoreguidelines-avoid-c-arrays",
+        "message": "do not declare C-style arrays, use std::array<> instead"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 81,
+        "column": 29,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 83,
+        "column": 26,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "20 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 87,
+        "column": 22,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "20 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 95,
+        "column": 77,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "95 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 96,
+        "column": 25,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 98,
+        "column": 54,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "100 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 98,
+        "column": 62,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "1e6 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 126,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 134,
+        "column": 19,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "120 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 155,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 160,
+        "column": 18,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "30 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 164,
+        "column": 25,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 172,
+        "column": 30,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 173,
+        "column": 19,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "640 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 173,
+        "column": 24,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "480 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 174,
+        "column": 18,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "30 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 177,
+        "column": 25,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 179,
+        "column": 22,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "10 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 193,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 199,
+        "column": 53,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "44202 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 200,
+        "column": 52,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "120 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 216,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 255,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 265,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'stats' of type 'ashdesk::GlassStats &' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 278,
+        "column": 57,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "50 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 289,
+        "column": 5,
+        "rule": "cppcoreguidelines-pro-type-vararg",
+        "message": "do not call c-style vararg functions"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 291,
+        "column": 116,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "1e6 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 296,
+        "column": 23,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "1120 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 296,
+        "column": 30,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "8 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 296,
+        "column": 43,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "740 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 302,
+        "column": 18,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "30 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 305,
+        "column": 19,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "640 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 305,
+        "column": 24,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "480 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 306,
+        "column": 18,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "30 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 308,
+        "column": 25,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 308,
+        "column": 31,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'QScrollBar *' -> 'bool'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 310,
+        "column": 22,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "10 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 312,
+        "column": 13,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'QScrollArea *' -> 'bool'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 312,
+        "column": 66,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 323,
+        "column": 5,
+        "rule": "cppcoreguidelines-pro-type-vararg",
+        "message": "do not call c-style vararg functions"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 328,
+        "column": 5,
+        "rule": "cppcoreguidelines-pro-type-vararg",
+        "message": "do not call c-style vararg functions"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 332,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 363,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 368,
+        "column": 47,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 377,
+        "column": 25,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "10 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 377,
+        "column": 32,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'QPushButton *' -> 'bool'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 402,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 417,
+        "column": 37,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 437,
+        "column": 37,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 438,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'directory' of type 'QTemporaryDir' can be declared 'const'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 461,
+        "column": 38,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "1000 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 462,
+        "column": 26,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "150 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 478,
+        "column": 33,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 480,
+        "column": 9,
+        "rule": "cert-err33-c",
+        "message": "the value returned by this function should not be disregarded; neglecting it may lead to errors"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 481,
+        "column": 9,
+        "rule": "cppcoreguidelines-avoid-c-arrays",
+        "message": "do not declare C-style arrays, use std::array<> instead"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 481,
+        "column": 22,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "16 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 482,
+        "column": 14,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'char *' -> 'bool'"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 482,
+        "column": 96,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 486,
+        "column": 33,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 487,
+        "column": 9,
+        "rule": "cert-err33-c",
+        "message": "the value returned by this function should not be disregarded; neglecting it may lead to errors"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 488,
+        "column": 16,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "23 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 491,
+        "column": 43,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "tests/gtest/desktop_ui_test.cpp",
+        "line": 492,
+        "column": 5,
+        "rule": "misc-const-correctness",
+        "message": "variable 'application' of type 'QApplication' can be declared 'const'"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 9,
+        "column": 13,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'host' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 10,
+        "column": 9,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'port' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 15,
+        "column": 9,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'theme' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 16,
+        "column": 9,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'material' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 17,
+        "column": 9,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'authentication' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 18,
+        "column": 13,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'keyFile' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 19,
+        "column": 9,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'port' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 20,
+        "column": 9,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'fps' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 21,
+        "column": 9,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'bitrate' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 22,
+        "column": 10,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'audio' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 23,
+        "column": 10,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'microphone' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 24,
+        "column": 10,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'clipboard' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 25,
+        "column": 10,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'files' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 26,
+        "column": 10,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'viewOnly' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 27,
+        "column": 10,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'metered' has public visibility"
+      },
+      {
+        "file": "ui/desktop_options.h",
+        "line": 28,
+        "column": 10,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'hostControl' has public visibility"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 19,
+        "column": 24,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 19,
+        "column": 31,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 20,
+        "column": 28,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 21,
+        "column": 29,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 22,
+        "column": 31,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 23,
+        "column": 29,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 32,
+        "column": 28,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 33,
+        "column": 28,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 36,
+        "column": 33,
+        "rule": "bugprone-easily-swappable-parameters",
+        "message": "2 adjacent parameters of 'rgba' of convertible types are easily swapped by mistake"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 42,
+        "column": 8,
+        "rule": "cppcoreguidelines-pro-type-member-init",
+        "message": "constructor does not initialize these fields: specular, backSpecular"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 98,
+        "column": 11,
+        "rule": "cppcoreguidelines-avoid-c-arrays",
+        "message": "do not declare C-style arrays, use std::array<> instead"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 109,
+        "column": 5,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 111,
+        "column": 43,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "160 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 115,
+        "column": 27,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".94 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 115,
+        "column": 36,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".92 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 115,
+        "column": 47,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".50 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 115,
+        "column": 56,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".60 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 115,
+        "column": 79,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".7 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 116,
+        "column": 27,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".10 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 116,
+        "column": 36,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".06 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 116,
+        "column": 47,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".55 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 116,
+        "column": 56,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".50 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 116,
+        "column": 78,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".7 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 117,
+        "column": 12,
+        "rule": "cppcoreguidelines-pro-type-member-init",
+        "message": "constructor does not initialize these fields: left, width, glow"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 122,
+        "column": 11,
+        "rule": "cppcoreguidelines-avoid-c-arrays",
+        "message": "do not declare C-style arrays, use std::array<> instead"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 129,
+        "column": 59,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 130,
+        "column": 24,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "24 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 131,
+        "column": 23,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 147,
+        "column": 13,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 152,
+        "column": 13,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 176,
+        "column": 60,
+        "rule": "bugprone-easily-swappable-parameters",
+        "message": "2 adjacent parameters of 'dropShadow' of similar type ('qreal') are easily swapped by mistake"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 196,
+        "column": 50,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".6 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 199,
+        "column": 52,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 199,
+        "column": 66,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 199,
+        "column": 71,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 199,
+        "column": 75,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 199,
+        "column": 79,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 199,
+        "column": 93,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 199,
+        "column": 106,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 205,
+        "column": 63,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 205,
+        "column": 68,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 211,
+        "column": 25,
+        "rule": "bugprone-easily-swappable-parameters",
+        "message": "2 adjacent parameters of 'travel' of similar type ('float') are easily swapped by mistake"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 212,
+        "column": 50,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 218,
+        "column": 14,
+        "rule": "bugprone-easily-swappable-parameters",
+        "message": "2 adjacent parameters of 'lighten' of convertible types are easily swapped by mistake"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 238,
+        "column": 25,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "120 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 240,
+        "column": 45,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 245,
+        "column": 22,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 246,
+        "column": 81,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 259,
+        "column": 84,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 262,
+        "column": 93,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 286,
+        "column": 109,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 288,
+        "column": 9,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 306,
+        "column": 20,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 309,
+        "column": 61,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 320,
+        "column": 23,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'GlassSurface *' -> 'bool'"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 323,
+        "column": 10,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'GlassSurface *' -> 'bool'"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 324,
+        "column": 36,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 325,
+        "column": 35,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'GlassSurface *' -> 'bool'"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 330,
+        "column": 65,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 342,
+        "column": 28,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 350,
+        "column": 30,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 352,
+        "column": 78,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 362,
+        "column": 44,
+        "rule": "readability-implicit-bool-conversion",
+        "message": "implicit conversion 'QWidget *' -> 'bool'"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 362,
+        "column": 84,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 363,
+        "column": 64,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 374,
+        "column": 5,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 384,
+        "column": 31,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".18 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 384,
+        "column": 51,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".25 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 384,
+        "column": 73,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "1.4 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 384,
+        "column": 92,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".9 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 385,
+        "column": 36,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".55 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 386,
+        "column": 46,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "160 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 388,
+        "column": 24,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".38 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 389,
+        "column": 24,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".55 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 390,
+        "column": 24,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".85 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 394,
+        "column": 46,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 394,
+        "column": 50,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 394,
+        "column": 55,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 394,
+        "column": 60,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 394,
+        "column": 74,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 394,
+        "column": 87,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 402,
+        "column": 5,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 404,
+        "column": 62,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 404,
+        "column": 69,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 406,
+        "column": 58,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 406,
+        "column": 64,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 411,
+        "column": 25,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 422,
+        "column": 59,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 422,
+        "column": 78,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 423,
+        "column": 68,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 424,
+        "column": 31,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 425,
+        "column": 13,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 441,
+        "column": 42,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5f is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 441,
+        "column": 53,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 441,
+        "column": 58,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 442,
+        "column": 54,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 442,
+        "column": 59,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 447,
+        "column": 17,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 453,
+        "column": 79,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "1e-4f is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 453,
+        "column": 79,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 459,
+        "column": 17,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 459,
+        "column": 54,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 459,
+        "column": 85,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 462,
+        "column": 29,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "0.004f is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 462,
+        "column": 29,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 462,
+        "column": 36,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 462,
+        "column": 37,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 462,
+        "column": 58,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 462,
+        "column": 86,
+        "rule": "readability-uppercase-literal-suffix",
+        "message": "floating point literal has suffix 'f', which is not uppercase"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 465,
+        "column": 94,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 471,
+        "column": 35,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 472,
+        "column": 27,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 473,
+        "column": 24,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 483,
+        "column": 5,
+        "rule": "readability-isolate-declaration",
+        "message": "multiple declarations in a single statement reduces readability"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 485,
+        "column": 18,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 485,
+        "column": 58,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 485,
+        "column": 85,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 492,
+        "column": 23,
+        "rule": "cppcoreguidelines-pro-type-reinterpret-cast",
+        "message": "do not use reinterpret_cast"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 499,
+        "column": 35,
+        "rule": "readability-braces-around-statements",
+        "message": "statement should be inside braces"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 500,
+        "column": 23,
+        "rule": "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "message": "do not use pointer arithmetic"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 519,
+        "column": 61,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 519,
+        "column": 65,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 519,
+        "column": 70,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.cpp",
+        "line": 519,
+        "column": 75,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": ".5 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.h",
+        "line": 20,
+        "column": 24,
+        "rule": "cppcoreguidelines-avoid-magic-numbers",
+        "message": "128 is a magic number; consider replacing it with a named constant"
+      },
+      {
+        "file": "ui/liquid_glass.h",
+        "line": 72,
+        "column": 15,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'size' has public visibility"
+      },
+      {
+        "file": "ui/liquid_glass.h",
+        "line": 73,
+        "column": 15,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'dpr' has public visibility"
+      },
+      {
+        "file": "ui/liquid_glass.h",
+        "line": 74,
+        "column": 14,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'dark' has public visibility"
+      },
+      {
+        "file": "ui/liquid_glass.h",
+        "line": 75,
+        "column": 18,
+        "rule": "misc-non-private-member-variables-in-classes",
+        "message": "member variable 'material' has public visibility"
+      }
+    ]
+  },
+  "autosar-increases": []
+}

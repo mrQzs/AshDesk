@@ -1,0 +1,16 @@
+# 构建产物
+/build/
+/out/
+/dist/
+*.obj
+*.pdb
+*.ilk
+# OpenSSL 3.5.9：本地用 vcpkg 编出来，只有端口、哈希和说明进仓库（third_party/openssl/README.AshDesk.md）
+/third_party/openssl/bin/
+/third_party/openssl/lib/
+/third_party/openssl/include/
+# GoogleTest：本地用 vcpkg 编出来，只有说明和许可证进仓库（third_party/googletest/README.AshDesk.md）
+/third_party/googletest/include/
+/third_party/googletest/lib/
+# Python 运行 tools/ 下的脚本时生成的字节码
+__pycache__/

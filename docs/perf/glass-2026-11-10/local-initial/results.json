@@ -1,0 +1,718 @@
+{
+  "started_utc": "2026-11-10T04:09:29Z",
+  "os": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel",
+  "logical_cpus": 20,
+  "conditions": {
+    "qpa": "offscreen",
+    "scale": "1.75",
+    "filter": "DesktopGlass.IdleRepaintReusesCachesWhileResizeAndScrollRecompose",
+    "rounds": 5,
+    "warmups_per_variant": 1,
+    "order": "AB, BA alternating",
+    "timeout_seconds": 60
+  },
+  "memory_scope": "backdrop KiB = QImage sharp + blurred sizeInBytes; not RSS/peak",
+  "binaries": {
+    "before": {
+      "ashdesk_ui_tests.exe": "0e75371d5731966f8a7ca4081d9c61afa0b11645951be90f24bbbe96db0d77e4",
+      "D3Dcompiler_47.dll": "e994847e01a6f1e4cbdc5a864616ac262f67ee4f14db194984661a8d927ab7f4",
+      "generic\\qtuiotouchplugin.dll": "c06dccfd97576b6255b56df43b03b1eabee8c01f75b6bf6ad550057771ab7cf2",
+      "iconengines\\qsvgicon.dll": "84f7391fb8cd5a9228d3d38ebcbf957e6c7cdc789981e7a4e6f671f6ace529ca",
+      "icuuc.dll": "9e132fc1cae204b3be8d5bc56fa1049d6eb2ae5a9701b84bb2ccd4af812e28b5",
+      "imageformats\\qgif.dll": "c0f3a53dc57682b157ad50e8c2671191c629d715871afd9b5c017a4be1f4e247",
+      "imageformats\\qicns.dll": "32e8d47268d19e09a1c2728b7d9bfb998bd6b30f4dfaf5d48c3e0b13f5263256",
+      "imageformats\\qico.dll": "a9f940f04e2511ec6c25e083635ca7e0c88518b33745ac84beb611c0feb8d497",
+      "imageformats\\qjpeg.dll": "a9d019fa4d8d8b9b4d14c9faff2459f4a1b450ae6bdc9193c53106544cb8c92b",
+      "imageformats\\qsvg.dll": "ddadba1f19ca590b3a2c1677da2fadcbb2115fb7c32aeab0d5fa049633995e69",
+      "imageformats\\qtga.dll": "036ee98fb6b07b8c84bd23daf431c1b1dadaed1ba6ea71fa76d8e1afefad3da9",
+      "imageformats\\qtiff.dll": "5ef5489a39850ac3f0a960edcf76587e877fbb66aaf62a41e9fa267fbc39bf5e",
+      "imageformats\\qwbmp.dll": "11f9052ad1682458731cb2793f043a094ca917f89f0448f99a41c21b4c22faea",
+      "imageformats\\qwebp.dll": "055e44b348868a8c125af0eda01813aedaf7da4e37e1eab09fa869d353b2da7a",
+      "networkinformation\\qnetworklistmanager.dll": "d042a101858d196c9efcd966f3e7ac6a13c4765af1c195fd2d156d6506961295",
+      "opengl32sw.dll": "b04de4541863bc7d8879040a78889c4849c1b1da2784c4630f734c146c2998ce",
+      "platforms\\qoffscreen.dll": "41781308ce8cee4cd05a4ed8958761fe48dc2c5159bd114c942b953bc91f2c1d",
+      "platforms\\qwindows.dll": "d58c61f02c2c477fd8d423259f6c51f65ed8c57c6aa2df3dd98272d47974a38c",
+      "Qt6Core.dll": "9fbea00b87ceae5f9e319c23010eacb903ed460c661b9b1b17bcabd02bf1eec2",
+      "Qt6Gui.dll": "63c31e9f79faee8e6ac3919f13be59d293c4fa5f091d200cb683c9f1ea4e6ae7",
+      "Qt6Network.dll": "e94b61c2ebbaab58db6b525b79cdc78072723ea9bd8f838cd79ad850f25cc275",
+      "Qt6Svg.dll": "b472d01159a858c5b9dfe8032b9994201ecc9ab967b4173379f0b05554766196",
+      "Qt6Test.dll": "e4527903dc54aced538c2ec9d22e197dab5d4a8c31b918ad58980ad14273f2fc",
+      "Qt6Widgets.dll": "6c139cf501fd4a4cf2b690520df79dd02687df061d51eb6b3c91757d503ef909",
+      "styles\\qmodernwindowsstyle.dll": "138701f32f1f570f46f50b6779d35d0b52175ee7eba37e6f26918321daa65d22",
+      "tls\\qcertonlybackend.dll": "01ff5d839709e57c6c5be481e4f6e11b1e07667f3b6bca1cf1a1a3f878ca022c",
+      "tls\\qschannelbackend.dll": "1c975e9f59d4aff5ded32efa332cacf6a94d32519b13267eba99794b9ca83f67"
+    },
+    "after": {
+      "ashdesk_ui_tests.exe": "b66a9d71b139cc2189bfede31b65490c5ba61b01ec4b681e9714c5538c80c60a",
+      "D3Dcompiler_47.dll": "e994847e01a6f1e4cbdc5a864616ac262f67ee4f14db194984661a8d927ab7f4",
+      "generic\\qtuiotouchplugin.dll": "c06dccfd97576b6255b56df43b03b1eabee8c01f75b6bf6ad550057771ab7cf2",
+      "iconengines\\qsvgicon.dll": "84f7391fb8cd5a9228d3d38ebcbf957e6c7cdc789981e7a4e6f671f6ace529ca",
+      "icuuc.dll": "9e132fc1cae204b3be8d5bc56fa1049d6eb2ae5a9701b84bb2ccd4af812e28b5",
+      "imageformats\\qgif.dll": "c0f3a53dc57682b157ad50e8c2671191c629d715871afd9b5c017a4be1f4e247",
+      "imageformats\\qicns.dll": "32e8d47268d19e09a1c2728b7d9bfb998bd6b30f4dfaf5d48c3e0b13f5263256",
+      "imageformats\\qico.dll": "a9f940f04e2511ec6c25e083635ca7e0c88518b33745ac84beb611c0feb8d497",
+      "imageformats\\qjpeg.dll": "a9d019fa4d8d8b9b4d14c9faff2459f4a1b450ae6bdc9193c53106544cb8c92b",
+      "imageformats\\qsvg.dll": "ddadba1f19ca590b3a2c1677da2fadcbb2115fb7c32aeab0d5fa049633995e69",
+      "imageformats\\qtga.dll": "036ee98fb6b07b8c84bd23daf431c1b1dadaed1ba6ea71fa76d8e1afefad3da9",
+      "imageformats\\qtiff.dll": "5ef5489a39850ac3f0a960edcf76587e877fbb66aaf62a41e9fa267fbc39bf5e",
+      "imageformats\\qwbmp.dll": "11f9052ad1682458731cb2793f043a094ca917f89f0448f99a41c21b4c22faea",
+      "imageformats\\qwebp.dll": "055e44b348868a8c125af0eda01813aedaf7da4e37e1eab09fa869d353b2da7a",
+      "networkinformation\\qnetworklistmanager.dll": "d042a101858d196c9efcd966f3e7ac6a13c4765af1c195fd2d156d6506961295",
+      "opengl32sw.dll": "b04de4541863bc7d8879040a78889c4849c1b1da2784c4630f734c146c2998ce",
+      "platforms\\qoffscreen.dll": "41781308ce8cee4cd05a4ed8958761fe48dc2c5159bd114c942b953bc91f2c1d",
+      "platforms\\qwindows.dll": "d58c61f02c2c477fd8d423259f6c51f65ed8c57c6aa2df3dd98272d47974a38c",
+      "Qt6Core.dll": "9fbea00b87ceae5f9e319c23010eacb903ed460c661b9b1b17bcabd02bf1eec2",
+      "Qt6Gui.dll": "63c31e9f79faee8e6ac3919f13be59d293c4fa5f091d200cb683c9f1ea4e6ae7",
+      "Qt6Network.dll": "e94b61c2ebbaab58db6b525b79cdc78072723ea9bd8f838cd79ad850f25cc275",
+      "Qt6Svg.dll": "b472d01159a858c5b9dfe8032b9994201ecc9ab967b4173379f0b05554766196",
+      "Qt6Test.dll": "e4527903dc54aced538c2ec9d22e197dab5d4a8c31b918ad58980ad14273f2fc",
+      "Qt6Widgets.dll": "6c139cf501fd4a4cf2b690520df79dd02687df061d51eb6b3c91757d503ef909",
+      "styles\\qmodernwindowsstyle.dll": "138701f32f1f570f46f50b6779d35d0b52175ee7eba37e6f26918321daa65d22",
+      "tls\\qcertonlybackend.dll": "01ff5d839709e57c6c5be481e4f6e11b1e07667f3b6bca1cf1a1a3f878ca022c",
+      "tls\\qschannelbackend.dll": "1c975e9f59d4aff5ded32efa332cacf6a94d32519b13267eba99794b9ca83f67"
+    }
+  },
+  "sources": {
+    "CMakeLists.txt": "8715420ad8a475d21639cc338ffe397df004023c91fb9adfdb982f76b54e96fa",
+    "ui/liquid_glass.cpp": "3a528539d732bcdef31bdf9d7fc6f4f0b82ebae29e543b6b9d39f3890af861d6",
+    "ui/liquid_glass.h": "936b6fcf50628474b0aba82367e39b0a144c1277d716d771771fc314af1b3cf8",
+    "tests/gtest/desktop_ui_test.cpp": "66ce9a1ab631947506bb66022dd33e9cab4f71bce13913ab56a8104a6ab78005",
+    "tests/test_glass.c": "5c0a0f89993dd728da4a08d30ca3f640c7242cd565de77308e4767db8a25e54c",
+    "core/kernels/ad_glass.c": "b147d33e2c05445deca774401524ef10cbe47471de5d38c8e636fd9b2a7dd2dc",
+    "core/kernels/ad_glass.h": "ad7a7a4905a710e152f57dc9dcdfd4a4a9a34d7789a6c5646efb5be0ed66166b",
+    "core/kernels/ad_glass_x64.asm": "38c2a346749561f553d100ad9a7a38c7e6bb18e89eb05309805bc0fe17dc8925",
+    "core/kernels/ad_glass_a64.S": "e038a02eee051eaa30d727ddfa9ebc17b3b092ad4c18e13a3a5f16dd39ab4c72",
+    "tools/glass_bench.py": "1ecd09e789851a3ca2f7ab9247f4d441c4a32a692e5c2eb799affce88ba8d2fb"
+  },
+  "warmups": [
+    {
+      "window": [
+        1120,
+        740,
+        1.75
+      ],
+      "elapsed_seconds": 0.8177717998623848,
+      "exit_code": 0,
+      "stdout": "00-before.stdout.txt",
+      "stderr": "00-before.stderr.txt",
+      "gtest_xml": "00-before.xml",
+      "metrics": {
+        "backdrop_ms": 22.02,
+        "backdrop_kib": 19829.0,
+        "idle_p50_ms": 4.31,
+        "idle_p95_ms": 4.94,
+        "drag_p50_ms": 10.34,
+        "drag_p95_ms": 11.17,
+        "scroll_p50_ms": 8.79,
+        "scroll_p95_ms": 9.22,
+        "composition_p95_ms": 2.9,
+        "small_glass_p95_ms": 2.48,
+        "small_solid_p95_ms": 3.37
+      },
+      "variant": "before",
+      "round": 0
+    },
+    {
+      "window": [
+        1120,
+        740,
+        1.75
+      ],
+      "elapsed_seconds": 0.7058943000156432,
+      "exit_code": 0,
+      "stdout": "00-after.stdout.txt",
+      "stderr": "00-after.stderr.txt",
+      "gtest_xml": "00-after.xml",
+      "metrics": {
+        "backdrop_ms": 13.58,
+        "backdrop_kib": 10533.0,
+        "idle_p50_ms": 3.05,
+        "idle_p95_ms": 3.88,
+        "drag_p50_ms": 7.76,
+        "drag_p95_ms": 8.21,
+        "scroll_p50_ms": 6.79,
+        "scroll_p95_ms": 7.11,
+        "composition_p95_ms": 3.54,
+        "small_glass_p95_ms": 1.91,
+        "small_solid_p95_ms": 3.22,
+        "panel_cache_kib": 21160.0
+      },
+      "variant": "after",
+      "round": 0
+    }
+  ],
+  "runs": [
+    {
+      "window": [
+        1120,
+        740,
+        1.75
+      ],
+      "elapsed_seconds": 0.6817063998896629,
+      "exit_code": 0,
+      "stdout": "01-after.stdout.txt",
+      "stderr": "01-after.stderr.txt",
+      "gtest_xml": "01-after.xml",
+      "metrics": {
+        "backdrop_ms": 12.32,
+        "backdrop_kib": 10533.0,
+        "idle_p50_ms": 3.07,
+        "idle_p95_ms": 3.3,
+        "drag_p50_ms": 7.53,
+        "drag_p95_ms": 7.82,
+        "scroll_p50_ms": 6.52,
+        "scroll_p95_ms": 6.74,
+        "composition_p95_ms": 2.71,
+        "small_glass_p95_ms": 1.87,
+        "small_solid_p95_ms": 3.51,
+        "panel_cache_kib": 21160.0
+      },
+      "variant": "after",
+      "round": 1
+    },
+    {
+      "window": [
+        1120,
+        740,
+        1.75
+      ],
+      "elapsed_seconds": 0.8460794999264181,
+      "exit_code": 0,
+      "stdout": "01-before.stdout.txt",
+      "stderr": "01-before.stderr.txt",
+      "gtest_xml": "01-before.xml",
+      "metrics": {
+        "backdrop_ms": 22.45,
+        "backdrop_kib": 19829.0,
+        "idle_p50_ms": 4.4,
+        "idle_p95_ms": 4.54,
+        "drag_p50_ms": 10.08,
+        "drag_p95_ms": 10.88,
+        "scroll_p50_ms": 8.99,
+        "scroll_p95_ms": 9.44,
+        "composition_p95_ms": 2.74,
+        "small_glass_p95_ms": 2.5,
+        "small_solid_p95_ms": 3.56
+      },
+      "variant": "before",
+      "round": 1
+    },
+    {
+      "window": [
+        1120,
+        740,
+        1.75
+      ],
+      "elapsed_seconds": 0.8527181998360902,
+      "exit_code": 0,
+      "stdout": "02-before.stdout.txt",
+      "stderr": "02-before.stderr.txt",
+      "gtest_xml": "02-before.xml",
+      "metrics": {
+        "backdrop_ms": 22.07,
+        "backdrop_kib": 19829.0,
+        "idle_p50_ms": 4.38,
+        "idle_p95_ms": 4.82,
+        "drag_p50_ms": 10.34,
+        "drag_p95_ms": 10.71,
+        "scroll_p50_ms": 8.85,
+        "scroll_p95_ms": 9.92,
+        "composition_p95_ms": 3.45,
+        "small_glass_p95_ms": 2.46,
+        "small_solid_p95_ms": 3.46
+      },
+      "variant": "before",
+      "round": 2
+    },
+    {
+      "window": [
+        1120,
+        740,
+        1.75
+      ],
+      "elapsed_seconds": 0.6764080000575632,
+      "exit_code": 0,
+      "stdout": "02-after.stdout.txt",
+      "stderr": "02-after.stderr.txt",
+      "gtest_xml": "02-after.xml",
+      "metrics": {
+        "backdrop_ms": 12.7,
+        "backdrop_kib": 10533.0,
+        "idle_p50_ms": 3.02,
+        "idle_p95_ms": 3.2,
+        "drag_p50_ms": 7.44,
+        "drag_p95_ms": 8.08,
+        "scroll_p50_ms": 6.75,
+        "scroll_p95_ms": 7.2,
+        "composition_p95_ms": 2.54,
+        "small_glass_p95_ms": 1.96,
+        "small_solid_p95_ms": 3.33,
+        "panel_cache_kib": 21160.0
+      },
+      "variant": "after",
+      "round": 2
+    },
+    {
+      "window": [
+        1120,
+        740,
+        1.75
+      ],
+      "elapsed_seconds": 0.6706931001972407,
+      "exit_code": 0,
+      "stdout": "03-after.stdout.txt",
+      "stderr": "03-after.stderr.txt",
+      "gtest_xml": "03-after.xml",
+      "metrics": {
+        "backdrop_ms": 13.23,
+        "backdrop_kib": 10533.0,
+        "idle_p50_ms": 2.99,
+        "idle_p95_ms": 3.31,
+        "drag_p50_ms": 7.67,
+        "drag_p95_ms": 8.08,
+        "scroll_p50_ms": 6.62,
+        "scroll_p95_ms": 6.84,
+        "composition_p95_ms": 1.96,
+        "small_glass_p95_ms": 1.86,
+        "small_solid_p95_ms": 3.72,
+        "panel_cache_kib": 21160.0
+      },
+      "variant": "after",
+      "round": 3
+    },
+    {
+      "window": [
+        1120,
+        740,
+        1.75
+      ],
+      "elapsed_seconds": 0.8386436998844147,
+      "exit_code": 0,
+      "stdout": "03-before.stdout.txt",
+      "stderr": "03-before.stderr.txt",
+      "gtest_xml": "03-before.xml",
+      "metrics": {
+        "backdrop_ms": 22.58,
+        "backdrop_kib": 19829.0,
+        "idle_p50_ms": 4.44,
+        "idle_p95_ms": 4.79,
+        "drag_p50_ms": 10.11,
+        "drag_p95_ms": 10.84,
+        "scroll_p50_ms": 9.01,
+        "scroll_p95_ms": 9.44,
+        "composition_p95_ms": 2.89,
+        "small_glass_p95_ms": 2.58,
+        "small_solid_p95_ms": 3.36
+      },
+      "variant": "before",
+      "round": 3
+    },
+    {
+      "window": [
+        1120,
+        740,
+        1.75
+      ],
+      "elapsed_seconds": 0.8513040000107139,
+      "exit_code": 0,
+      "stdout": "04-before.stdout.txt",
+      "stderr": "04-before.stderr.txt",
+      "gtest_xml": "04-before.xml",
+      "metrics": {
+        "backdrop_ms": 22.6,
+        "backdrop_kib": 19829.0,
+        "idle_p50_ms": 4.43,
+        "idle_p95_ms": 5.04,
+        "drag_p50_ms": 10.63,
+        "drag_p95_ms": 11.7,
+        "scroll_p50_ms": 8.85,
+        "scroll_p95_ms": 9.47,
+        "composition_p95_ms": 2.83,
+        "small_glass_p95_ms": 2.46,
+        "small_solid_p95_ms": 3.83
+      },
+      "variant": "before",
+      "round": 4
+    },
+    {
+      "window": [
+        1120,
+        740,
+        1.75
+      ],
+      "elapsed_seconds": 0.7033753001596779,
+      "exit_code": 0,
+      "stdout": "04-after.stdout.txt",
+      "stderr": "04-after.stderr.txt",
+      "gtest_xml": "04-after.xml",
+      "metrics": {
+        "backdrop_ms": 13.69,
+        "backdrop_kib": 10533.0,
+        "idle_p50_ms": 2.99,
+        "idle_p95_ms": 3.3,
+        "drag_p50_ms": 7.56,
+        "drag_p95_ms": 7.9,
+        "scroll_p50_ms": 6.67,
+        "scroll_p95_ms": 6.92,
+        "composition_p95_ms": 2.64,
+        "small_glass_p95_ms": 1.97,
+        "small_solid_p95_ms": 3.02,
+        "panel_cache_kib": 21160.0
+      },
+      "variant": "after",
+      "round": 4
+    },
+    {
+      "window": [
+        1120,
+        740,
+        1.75
+      ],
+      "elapsed_seconds": 0.6807486000470817,
+      "exit_code": 0,
+      "stdout": "05-after.stdout.txt",
+      "stderr": "05-after.stderr.txt",
+      "gtest_xml": "05-after.xml",
+      "metrics": {
+        "backdrop_ms": 13.51,
+        "backdrop_kib": 10533.0,
+        "idle_p50_ms": 3.04,
+        "idle_p95_ms": 3.5,
+        "drag_p50_ms": 7.64,
+        "drag_p95_ms": 7.98,
+        "scroll_p50_ms": 6.58,
+        "scroll_p95_ms": 6.83,
+        "composition_p95_ms": 3.01,
+        "small_glass_p95_ms": 2.08,
+        "small_solid_p95_ms": 3.13,
+        "panel_cache_kib": 21160.0
+      },
+      "variant": "after",
+      "round": 5
+    },
+    {
+      "window": [
+        1120,
+        740,
+        1.75
+      ],
+      "elapsed_seconds": 0.822746800025925,
+      "exit_code": 0,
+      "stdout": "05-before.stdout.txt",
+      "stderr": "05-before.stderr.txt",
+      "gtest_xml": "05-before.xml",
+      "metrics": {
+        "backdrop_ms": 22.62,
+        "backdrop_kib": 19829.0,
+        "idle_p50_ms": 4.38,
+        "idle_p95_ms": 4.61,
+        "drag_p50_ms": 10.32,
+        "drag_p95_ms": 10.63,
+        "scroll_p50_ms": 8.87,
+        "scroll_p95_ms": 9.39,
+        "composition_p95_ms": 2.78,
+        "small_glass_p95_ms": 2.45,
+        "small_solid_p95_ms": 3.45
+      },
+      "variant": "before",
+      "round": 5
+    }
+  ],
+  "summary": {
+    "before": {
+      "backdrop_ms": {
+        "median": 22.58,
+        "min": 22.07,
+        "max": 22.62,
+        "samples": [
+          22.45,
+          22.07,
+          22.58,
+          22.6,
+          22.62
+        ]
+      },
+      "backdrop_kib": {
+        "median": 19829.0,
+        "min": 19829.0,
+        "max": 19829.0,
+        "samples": [
+          19829.0,
+          19829.0,
+          19829.0,
+          19829.0,
+          19829.0
+        ]
+      },
+      "idle_p50_ms": {
+        "median": 4.4,
+        "min": 4.38,
+        "max": 4.44,
+        "samples": [
+          4.4,
+          4.38,
+          4.44,
+          4.43,
+          4.38
+        ]
+      },
+      "idle_p95_ms": {
+        "median": 4.79,
+        "min": 4.54,
+        "max": 5.04,
+        "samples": [
+          4.54,
+          4.82,
+          4.79,
+          5.04,
+          4.61
+        ]
+      },
+      "drag_p50_ms": {
+        "median": 10.32,
+        "min": 10.08,
+        "max": 10.63,
+        "samples": [
+          10.08,
+          10.34,
+          10.11,
+          10.63,
+          10.32
+        ]
+      },
+      "drag_p95_ms": {
+        "median": 10.84,
+        "min": 10.63,
+        "max": 11.7,
+        "samples": [
+          10.88,
+          10.71,
+          10.84,
+          11.7,
+          10.63
+        ]
+      },
+      "scroll_p50_ms": {
+        "median": 8.87,
+        "min": 8.85,
+        "max": 9.01,
+        "samples": [
+          8.99,
+          8.85,
+          9.01,
+          8.85,
+          8.87
+        ]
+      },
+      "scroll_p95_ms": {
+        "median": 9.44,
+        "min": 9.39,
+        "max": 9.92,
+        "samples": [
+          9.44,
+          9.92,
+          9.44,
+          9.47,
+          9.39
+        ]
+      },
+      "composition_p95_ms": {
+        "median": 2.83,
+        "min": 2.74,
+        "max": 3.45,
+        "samples": [
+          2.74,
+          3.45,
+          2.89,
+          2.83,
+          2.78
+        ]
+      },
+      "small_glass_p95_ms": {
+        "median": 2.46,
+        "min": 2.45,
+        "max": 2.58,
+        "samples": [
+          2.5,
+          2.46,
+          2.58,
+          2.46,
+          2.45
+        ]
+      },
+      "small_solid_p95_ms": {
+        "median": 3.46,
+        "min": 3.36,
+        "max": 3.83,
+        "samples": [
+          3.56,
+          3.46,
+          3.36,
+          3.83,
+          3.45
+        ]
+      }
+    },
+    "after": {
+      "backdrop_ms": {
+        "median": 13.23,
+        "min": 12.32,
+        "max": 13.69,
+        "samples": [
+          12.32,
+          12.7,
+          13.23,
+          13.69,
+          13.51
+        ]
+      },
+      "backdrop_kib": {
+        "median": 10533.0,
+        "min": 10533.0,
+        "max": 10533.0,
+        "samples": [
+          10533.0,
+          10533.0,
+          10533.0,
+          10533.0,
+          10533.0
+        ]
+      },
+      "idle_p50_ms": {
+        "median": 3.02,
+        "min": 2.99,
+        "max": 3.07,
+        "samples": [
+          3.07,
+          3.02,
+          2.99,
+          2.99,
+          3.04
+        ]
+      },
+      "idle_p95_ms": {
+        "median": 3.3,
+        "min": 3.2,
+        "max": 3.5,
+        "samples": [
+          3.3,
+          3.2,
+          3.31,
+          3.3,
+          3.5
+        ]
+      },
+      "drag_p50_ms": {
+        "median": 7.56,
+        "min": 7.44,
+        "max": 7.67,
+        "samples": [
+          7.53,
+          7.44,
+          7.67,
+          7.56,
+          7.64
+        ]
+      },
+      "drag_p95_ms": {
+        "median": 7.98,
+        "min": 7.82,
+        "max": 8.08,
+        "samples": [
+          7.82,
+          8.08,
+          8.08,
+          7.9,
+          7.98
+        ]
+      },
+      "scroll_p50_ms": {
+        "median": 6.62,
+        "min": 6.52,
+        "max": 6.75,
+        "samples": [
+          6.52,
+          6.75,
+          6.62,
+          6.67,
+          6.58
+        ]
+      },
+      "scroll_p95_ms": {
+        "median": 6.84,
+        "min": 6.74,
+        "max": 7.2,
+        "samples": [
+          6.74,
+          7.2,
+          6.84,
+          6.92,
+          6.83
+        ]
+      },
+      "composition_p95_ms": {
+        "median": 2.64,
+        "min": 1.96,
+        "max": 3.01,
+        "samples": [
+          2.71,
+          2.54,
+          1.96,
+          2.64,
+          3.01
+        ]
+      },
+      "small_glass_p95_ms": {
+        "median": 1.96,
+        "min": 1.86,
+        "max": 2.08,
+        "samples": [
+          1.87,
+          1.96,
+          1.86,
+          1.97,
+          2.08
+        ]
+      },
+      "small_solid_p95_ms": {
+        "median": 3.33,
+        "min": 3.02,
+        "max": 3.72,
+        "samples": [
+          3.51,
+          3.33,
+          3.72,
+          3.02,
+          3.13
+        ]
+      },
+      "panel_cache_kib": {
+        "median": 21160.0,
+        "min": 21160.0,
+        "max": 21160.0,
+        "samples": [
+          21160.0,
+          21160.0,
+          21160.0,
+          21160.0,
+          21160.0
+        ]
+      }
+    },
+    "median_change_percent": {
+      "backdrop_ms": -41.40832595217005,
+      "backdrop_kib": -46.88083110595592,
+      "idle_p50_ms": -31.36363636363637,
+      "idle_p95_ms": -31.106471816283932,
+      "drag_p50_ms": -26.74418604651163,
+      "drag_p95_ms": -26.383763837638373,
+      "scroll_p50_ms": -25.36640360766629,
+      "scroll_p95_ms": -27.542372881355924,
+      "composition_p95_ms": -6.7137809187279185,
+      "small_glass_p95_ms": -20.32520325203252,
+      "small_solid_p95_ms": -3.7572254335260125
+    }
+  },
+  "passed": true
+}

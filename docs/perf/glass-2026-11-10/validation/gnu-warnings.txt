@@ -1,0 +1,2 @@
+GCC / Clang（MinGW 目标，-Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion）：99 个翻译单元，1 条
+  gcc: tests/gtest/desktop_ui_test.cpp:119: loop variable ‘invalid’ of type ‘const QString&’ binds to a temporary constructed from type ‘const char* const’ [-Wrange-loop-construct]

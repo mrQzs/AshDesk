@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="0" disabled="0" errors="0" time="1.501" timestamp="2026-11-10T13:15:45.189" name="AllTests">
+  <testsuite name="DesktopGlass" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.837" timestamp="2026-11-10T13:15:45.189">
+    <testcase name="IdleRepaintReusesCachesWhileResizeAndScrollRecompose" file="D:\Code\AetherDesk\build\glass-proof\source-before\tests\gtest\desktop_ui_test.cpp" line="254" status="run" result="completed" time="0.836" timestamp="2026-11-10T13:15:45.189" classname="DesktopGlass" />
+  </testsuite>
+  <testsuite name="GlassBenchmark" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.664" timestamp="2026-11-10T13:15:46.026">
+    <testcase name="FixedPanelMovement" file="D:\Code\AetherDesk\build\glass-proof\source-before\tests\gtest\glass_benchmark_test.cpp" line="12" status="run" result="completed" time="0.664" timestamp="2026-11-10T13:15:46.026" classname="GlassBenchmark" />
+  </testsuite>
+</testsuites>
