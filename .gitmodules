@@ -1,0 +1,20 @@
+[submodule "server"]
+	path = server
+	url = https://github.com/mrQzs/AshDeskServer.git
+[submodule "private/engine"]
+	path = private/engine
+	url = https://github.com/mrQzs/AshDeskEngine.git
+	branch = borrowed-designs
+	update = none
+[submodule "private/drivers"]
+	path = private/drivers
+	url = https://github.com/mrQzs/AshDeskDrivers.git
+	update = none
+[submodule "private/apple"]
+	path = private/apple
+	url = https://github.com/mrQzs/AshDesk_Apple.git
+	update = none
+[submodule "private/android"]
+	path = private/android
+	url = https://github.com/mrQzs/AshDesk_Android.git
+	update = none
