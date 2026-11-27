@@ -16,3 +16,6 @@
 [submodule "android"]
 	path = android
 	url = https://github.com/mrQzs/AshDeskAndroid.git
+[submodule "harmony"]
+	path = harmony
+	url = https://github.com/mrQzs/AshDeskHarmony.git

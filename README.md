@@ -20,6 +20,7 @@ AshDesk（本仓库，公开）
 ├── server/        → AshDeskServer：信令与中继服务器（公开，AGPL-3.0）
 ├── apple/         → AshDeskApple：iPad / iOS 客户端（公开，Apache-2.0，筹备中）
 ├── android/       → AshDeskAndroid：安卓客户端（公开，Apache-2.0，筹备中）
+├── harmony/       → AshDeskHarmony：鸿蒙客户端（公开，Apache-2.0，筹备中）
 └── private/       以下子库不公开，外人克隆时自动跳过
     ├── engine/    → AshDeskEngine：远程桌面引擎（主机、客户端、系统服务）
     └── drivers/   → AshDeskDrivers：虚拟显示器、虚拟声卡驱动
