@@ -1,0 +1,135 @@
+# 持续集成：只编译本仓库（界面、液态玻璃内核、更新器）并跑测试，推送和 PR 都跑。
+# 不拉子模块（私有的拿不到，公开的这里用不上），不用任何 secrets：发布（签名、上传 Releases）在私有的引擎仓库里做。
+# 界面测试用假核心（tests/gtest/fake_core.cpp），不需要引擎。
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  QT_VERSION: '6.10.1'
+
+jobs:
+  windows-msvc:
+    # windows-latest 的编译器跟着镜像变，/WX 下会冒出开发机上没有的警告；固定 VS 2022
+    runs-on: windows-2022
+    timeout-minutes: 90
+    env:
+      VCPKG_BASELINE: 9eec002df1cd109f8f104cd966a763daf9751489
+      BUILD_DIR: build
+    steps:
+      - uses: actions/checkout@v7
+
+      # OpenSSL（更新器验签名用）和 GoogleTest 按各自 README.AshDesk.md 的端口、triplet、基线编一次后缓存。
+      # 改了下面这步就把 key 里的 v1 加一
+      - name: Cache third-party binaries
+        id: deps
+        uses: actions/cache@v6
+        with:
+          path: |
+            third_party/openssl/bin
+            third_party/openssl/lib
+            third_party/openssl/include
+            third_party/googletest/include
+            third_party/googletest/lib
+          key: third-party-v1-${{ env.VCPKG_BASELINE }}-${{ hashFiles('third_party/openssl/port/**', 'third_party/*/README.AshDesk.md') }}
+
+      - name: Build third-party libraries (vcpkg)
+        if: steps.deps.outputs.cache-hit != 'true'
+        shell: pwsh
+        run: |
+          $vcpkg = $env:VCPKG_INSTALLATION_ROOT
+          # 清单模式按基线取端口版本，镜像里的 vcpkg 克隆不一定有这个提交
+          git -C $vcpkg cat-file -e "$env:VCPKG_BASELINE^{commit}" 2>$null
+          if ($LASTEXITCODE -ne 0) {
+              git -C $vcpkg fetch --quiet origin $env:VCPKG_BASELINE
+              if ($LASTEXITCODE -ne 0) { throw "fetch vcpkg baseline failed" }
+          }
+          function Install-Ports([string]$Name, [string]$Triplet, [string[]]$Ports, [string[]]$Options) {
+              $root = Join-Path $env:RUNNER_TEMP $Name
+              New-Item -ItemType Directory -Force $root | Out-Null
+              @{ name = $Name; version = '0.1.0'; 'builtin-baseline' = $env:VCPKG_BASELINE; dependencies = $Ports } |
+                  ConvertTo-Json | Set-Content (Join-Path $root 'vcpkg.json')
+              & (Join-Path $vcpkg 'vcpkg.exe') install --triplet $Triplet "--x-manifest-root=$root" @Options | Out-Host
+              if ($LASTEXITCODE -ne 0) { throw "vcpkg install $Ports failed" }
+              Join-Path $root "vcpkg_installed\$Triplet"
+          }
+          $tp = Join-Path $env:GITHUB_WORKSPACE 'third_party'
+          $ssl = Install-Ports ashdesk-openssl x64-windows @('openssl') @("--overlay-ports=$tp\openssl\port")
+          $lib = Install-Ports ashdesk-static x64-windows-static-md @('gtest') @()
+          New-Item -ItemType Directory -Force "$tp\openssl\bin", "$tp\openssl\lib", "$tp\googletest\include", "$tp\googletest\lib" | Out-Null
+          Copy-Item "$ssl\bin\libssl-3-x64.dll", "$ssl\bin\libcrypto-3-x64.dll" "$tp\openssl\bin"
+          Copy-Item "$ssl\lib\libssl.lib", "$ssl\lib\libcrypto.lib" "$tp\openssl\lib"
+          Copy-Item "$ssl\include" "$tp\openssl\include" -Recurse
+          Copy-Item "$lib\include\gtest" "$tp\googletest\include\gtest" -Recurse
+          Copy-Item "$lib\lib\gtest.lib", "$lib\lib\manual-link\gtest_main.lib" "$tp\googletest\lib"
+
+      # glass/ 的 .asm 要 NASM，镜像里没有
+      - name: Install NASM
+        shell: pwsh
+        run: |
+          choco install nasm --no-progress -y
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Add-Content $env:GITHUB_PATH "$env:ProgramFiles\NASM"
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ env.QT_VERSION }}
+          arch: win64_msvc2022_64
+          cache: true
+
+      # 自己编的 OpenSSL DLL 和 SHA256SUMS 对不上（构建不可复现），给 OPENSSL_ROOT_DIR 跳过哈希核对
+      - name: Configure
+        shell: pwsh
+        run: |
+          $src = $env:GITHUB_WORKSPACE -replace '\\', '/'
+          & .\tools\vsrun.cmd cmake -S . -B $env:BUILD_DIR -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo `
+              "-DCMAKE_PREFIX_PATH=$env:QT_ROOT_DIR" "-DOPENSSL_ROOT_DIR=$src/third_party/openssl"
+
+      - name: Build
+        shell: pwsh
+        run: '& .\tools\vsrun.cmd cmake --build $env:BUILD_DIR --parallel'
+
+      # 界面测试在 Windows 上用真实的窗口平台插件（offscreen 在 Windows 上把字都画成方框）
+      - name: Test
+        shell: pwsh
+        run: ctest --test-dir $env:BUILD_DIR --output-on-failure --timeout 600
+
+  linux-gcc:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ninja-build nasm libgtest-dev libgl1-mesa-dev libxkbcommon-dev libfontconfig1 fonts-noto-cjk
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ env.QT_VERSION }}
+          arch: linux_gcc_64
+          cache: true
+
+      - name: Configure
+        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo "-DCMAKE_PREFIX_PATH=$QT_ROOT_DIR"
+
+      - name: Build
+        run: cmake --build build --parallel
+
+      # 界面测试用 offscreen 平台插件（CMakeLists.txt 给非 Windows 设的）
+      - name: Test
+        run: ctest --test-dir build --output-on-failure --timeout 600
