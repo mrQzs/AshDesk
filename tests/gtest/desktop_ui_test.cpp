@@ -640,7 +640,11 @@ TEST(DesktopDiagnostics, ArchiveHoldsRecentDumpsLogsAndCapsWithoutSecrets) {
         EXPECT_EQ(process.exitCode(), 0);
         return QString::fromUtf8(process.readAllStandardOutput());
     };
-    QStringList entries = tar({"-tf", target}).split('\n', Qt::SkipEmptyParts);
+    // 系统 tar（bsdtar）按 ANSI 代码页收参数：英文系统上中文路径传不进去。产品里先写 pack.zip 再复制过去，不受影响；
+    // 这里核对时也换个 ASCII 的名字
+    const QString copied = root.filePath(QStringLiteral("out/check.zip"));
+    ASSERT_TRUE(QFile::copy(target, copied));
+    QStringList entries = tar({"-tf", copied}).split('\n', Qt::SkipEmptyParts);
     for (QString &entry : entries) entry = entry.trimmed();
     entries.sort();
     QStringList expected{"version.txt", "ui/host.txt", "core/host.log", "core/big.log", "core/net.log", "data/audit.log",
@@ -648,7 +652,7 @@ TEST(DesktopDiagnostics, ArchiveHoldsRecentDumpsLogsAndCapsWithoutSecrets) {
     for (int i = 2; i < 7; ++i) expected << QString("core/adrd_host-crash-2026010%1-000000.dmp").arg(i);
     expected.sort();
     EXPECT_EQ(entries, expected);
-    tar({"-xf", target, "-C", root.filePath("out")});
+    tar({"-xf", copied, "-C", root.filePath("out")});
     const auto read = [&root](const QString &name) {
         QFile file(root.filePath("out/" + name));
         EXPECT_TRUE(file.open(QIODevice::ReadOnly)) << name.toStdString();
@@ -3092,6 +3096,9 @@ TEST(DesktopDrivers, InstallCommandRunsTheScriptOfTheInstallDirectoryWithQuotedP
 }
 
 TEST(DesktopDrivers, CertificateIsTheSingleCerFileInTheDriverFolder) {
+#ifndef Q_OS_WIN
+    GTEST_SKIP() << "驱动只在 Windows 上装，安装命令里的路径按 Windows 写";
+#endif
     const QTemporaryDir directory;
     ASSERT_TRUE(directory.isValid());
     const QDir root(directory.path());
@@ -3151,6 +3158,9 @@ TEST(DesktopService, QuotesOnlyWhatTheWindowsCommandLineWouldSplit) {
 }
 
 TEST(DesktopService, HostArgumentsKeepTheSettingsButLiveInTheServiceDirectory) {
+#ifndef Q_OS_WIN
+    GTEST_SKIP() << "系统服务只在 Windows 上有，参数里的路径按 Windows 写";
+#endif
     ashdesk::DesktopOptions options;
     options.hostControl = true;
     const QString directory = QDir::fromNativeSeparators(R"(C:\ProgramData\AshDesk)");
