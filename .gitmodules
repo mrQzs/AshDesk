@@ -10,11 +10,9 @@
 	path = private/drivers
 	url = https://github.com/mrQzs/AshDeskDrivers.git
 	update = none
-[submodule "private/apple"]
-	path = private/apple
-	url = https://github.com/mrQzs/AshDesk_Apple.git
-	update = none
-[submodule "private/android"]
-	path = private/android
-	url = https://github.com/mrQzs/AshDesk_Android.git
-	update = none
+[submodule "apple"]
+	path = apple
+	url = https://github.com/mrQzs/AshDeskApple.git
+[submodule "android"]
+	path = android
+	url = https://github.com/mrQzs/AshDeskAndroid.git

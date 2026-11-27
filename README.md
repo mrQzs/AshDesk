@@ -18,11 +18,11 @@ AshDesk（本仓库，公开）
 ├── tests/         玻璃内核、更新器、界面测试（界面测试用假核心，不需要引擎）
 ├── docs/          界面设计、界面和引擎之间的接口约定（docs/核心接口.md）
 ├── server/        → AshDeskServer：信令与中继服务器（公开，AGPL-3.0）
+├── apple/         → AshDeskApple：iPad / iOS 客户端（公开，Apache-2.0，筹备中）
+├── android/       → AshDeskAndroid：安卓客户端（公开，Apache-2.0，筹备中）
 └── private/       以下子库不公开，外人克隆时自动跳过
     ├── engine/    → AshDeskEngine：远程桌面引擎（主机、客户端、系统服务）
-    ├── drivers/   → AshDeskDrivers：虚拟显示器、虚拟声卡驱动
-    ├── apple/     → AshDesk_Apple：iPad / iOS 客户端（筹备中）
-    └── android/   → AshDesk_Android：安卓客户端（筹备中）
+    └── drivers/   → AshDeskDrivers：虚拟显示器、虚拟声卡驱动
 ```
 
 界面和引擎之间没有链接关系：界面以子进程方式拉起引擎的 `adrd_host` / `adrd_client`，经命令行参数和控制管道（文本行）交流，
