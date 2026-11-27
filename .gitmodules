@@ -4,7 +4,7 @@
 [submodule "private/engine"]
 	path = private/engine
 	url = https://github.com/mrQzs/AshDeskEngine.git
-	branch = borrowed-designs
+	branch = master
 	update = none
 [submodule "private/drivers"]
 	path = private/drivers
