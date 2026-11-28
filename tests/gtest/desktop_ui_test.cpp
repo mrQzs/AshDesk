@@ -781,6 +781,9 @@ TEST(DesktopLanguage, EnglishCoversLiveStatusTrayPairedDevicesDiagnosticsAndDial
     EXPECT_EQ(control<QLabel>(window, "clientStats")->text(), "59.8 fps · 0.10 Mb/s · RTT 1.6 ms · loss 0.0% · NVENC · Test pattern");
     control<QPushButton>(window, "nav1")->click();
     snapshot(window, "en-session");
+    // 新核心给名字（含转义的空格），不再按 enc= 查表：老表里没有的 QSV 也显示得出来
+    client->consume("@ui stats fps=60.0 lat_ms=5.2 rtt_ms=0.4 mbps=0.11 loss=0.0 path=direct enc=6 cap=4 perms=255 state=16 encoder=QSV codec=HEVC\\s4:4:4\n");
+    EXPECT_EQ(control<QLabel>(window, "clientStats")->text(), "60.0 fps · 0.11 Mb/s · RTT 0.4 ms · loss 0.0% · QSV · HEVC 4:4:4 · Test pattern");
 
     auto *host = control<ashdesk::CoreProcess>(window, "hostCore");
     for (const char *report : {"@ui phase=listening\n", "@ui phase=negotiate\n",

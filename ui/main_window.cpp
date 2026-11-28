@@ -207,13 +207,16 @@ QString clientPhaseText(const QString &phase, const QString &path) {
                                             : QCoreApplication::translate("ashdesk", "直连"));
 }
 
-// 每秒一行的统计；enc / cap 的数值是 core/wire/ad_wire.h 的 AD_ENC_* / AD_CAPK_*，0（未知）不显示
+// 每秒一行的统计。encoder= / codec= 是核心给的显示名（引擎的 docs/音视频管线架构.md §7），直接显示；
+// 老核心只有 enc= 的编号（AD_ENC_*），照旧查表。cap 的数值是 AD_CAPK_*。未知的不显示
 QString statsText(const CoreMessage &stats) {
     const QStringList encoders{{}, "NVENC", "x264", "OpenH264", "AE264"};
     const QStringList captures{{}, "DXGI", "GDI", "IDD", QCoreApplication::translate("ashdesk", "测试图样")};
     QStringList parts{QCoreApplication::translate("ashdesk", "%1 fps · %2 Mb/s · 往返 %3 ms · 丢包 %4%")
                           .arg(stats.value("fps"), stats.value("mbps"), stats.value("rtt_ms"), stats.value("loss"))};
-    parts << encoders.value(stats.value("enc").toInt()) << captures.value(stats.value("cap").toInt());
+    const QString encoder = stats.value("encoder");
+    parts << (encoder.isEmpty() ? encoders.value(stats.value("enc").toInt()) : encoder) << stats.value("codec")
+          << captures.value(stats.value("cap").toInt());
     parts.removeAll(QString());
     return parts.join(QStringLiteral(" · "));
 }
